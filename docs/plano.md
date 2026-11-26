@@ -1,6 +1,6 @@
-# Plano faseado (v1.2)
+# Plano faseado (v1.3)
 
-Segue a [metodologia v1.2](metodologia.md), que é a fonte de verdade. Este plano é
+Segue a [metodologia v1.3](metodologia.md), que é a fonte de verdade. Este plano é
 **macro**: tarefas, arquivos, parâmetros e entregáveis de cada fase são definidos só quando
 a fase começa, em `docs/fases/fase-N.md` (modelo em [fases/_modelo.md](fases/_modelo.md)).
 
@@ -156,3 +156,5 @@ Mínimo viável: F1 a F7.
 | 25/11/2026 | F2 | Cópia com lado maior 1280; 15% de desenvolvimento; E1 com 6 classes e E2 com 11; preparação no Colab; pacote `.tar` no Drive | Detalhamento aprovado |
 | 25/11/2026 | F5 | Luvas e calçado exigem os dois lados (metodologia v1.2) | Escolha do autor |
 | 25/11/2026 | F5 | Portão de entrada: só vota o quadro com a pessoa inteira na imagem; igual para A e B | Evitar decisão com a pessoa ainda entrando |
+| 26/11/2026 | F5 | Libera só com uma pessoa, em quadro aprovado pelo portão; segunda pessoa retira a liberação (metodologia v1.3) | Falha nunca libera; aprovada pelo autor |
+| 26/11/2026 | F5 | Caixas repetidas da mesma classe contam como um objeto (metodologia v1.3) | Evitar par falso; aprovada pelo autor |

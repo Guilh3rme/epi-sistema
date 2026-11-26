@@ -1,8 +1,10 @@
-# Metodologia do projeto (v1.2)
+# Metodologia do projeto (v1.3)
 
 **Aprovada pelo aluno em 25/11/2026.** v1.1: as duas associações entram no mesmo teste e os
-vídeos de pesquisa ficam locais. v1.2: luvas e calçado exigem os dois lados. A definir com o orientador: dispensa do Comitê de
-Ética nas gravações só com o autor e metas de liberação indevida e de indeterminados.
+vídeos de pesquisa ficam locais. v1.2: luvas e calçado exigem os dois lados. v1.3
+(26/11/2026): liberação só com uma única pessoa e detecções repetidas contadas uma vez.
+A definir com o orientador: dispensa do Comitê de Ética nas gravações só com o autor e metas
+de liberação indevida e de indeterminados.
 
 Estrutura alinhada aos itens do Art. 22, §6º do Regimento do PECS.
 
@@ -89,9 +91,16 @@ oclusão e distâncias variadas; fica como trabalho futuro.
 - **Associação B:** EPI na região do corpo correspondente.
 - **Itens em par:** luvas e calçado só contam como presentes com os dois lados, cada um com
   uma detecção própria.
+- **Detecções repetidas:** caixas da mesma classe sobrepostas acima de um limiar de IoU
+  contam como um só objeto, para que uma detecção repetida não forme um par. O limiar é
+  provisório até ser congelado na calibração, nunca escolhido no teste.
 - **Votação temporal:** estado de cada EPI definido em uma janela de N quadros.
 - **Decisão:** `LIBERADO`, `BLOQUEADO` ou `INDETERMINADO` (corpo não visível, baixa
   confiança, falha de câmera). Indeterminado **não libera** e pede conferência humana.
+- **Liberação:** `LIBERADO` só é emitido em um quadro que passou pelo portão de entrada
+  (pessoa inteira na imagem) e tem uma única pessoa detectada. Se aparecer uma segunda
+  pessoa com a liberação ativa, o sinal é retirado (a saída volta a nenhuma decisão) e não
+  é restabelecido na mesma passagem.
 - **Saída:** Modbus TCP para CLP simulado.
 
 ### Escopo de segurança

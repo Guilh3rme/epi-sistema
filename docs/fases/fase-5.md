@@ -213,6 +213,9 @@ roteirizado).
 | Liberar só com uma pessoa e dentro do portão; zerar com segunda pessoa | falha nunca libera | sim |
 | Caixas duplicadas contam como um objeto | evitar par falso | sim |
 
+As duas foram aprovadas pelo autor em 26/11/2026 e copiadas para o plano e a metodologia
+(v1.3).
+
 ### Resultados
 Nível 2, RTX 4060 Ti, provisórios, antes das duas correções de segurança: 35,3 quadros/s no
 laço e 27,8 com pessoa (vídeo a 30, logo o tempo até a decisão ainda não vale); A 17,1 ms e
@@ -228,7 +231,8 @@ B 35,5 ms por quadro; latência local até o CLP com mediana de 0,43 ms. Depois 
 - Limitações: o `LIBERADO` fica retido enquanto a passagem estiver aberta; processo morto
   retém o último valor no CLP; regiões de B encolhem com a pessoa de lado; calçado começa no
   tornozelo (bota alta pode aparecer como ausente); a leitura interrompida depende da
-  contagem de quadros do vídeo.
+  contagem de quadros do vídeo; mãos ou pés muito sobrepostos podem contar como um só item
+  (erra para o lado de não liberar); a segunda pessoa só é percebida se for detectada.
 
 ### Atualizações feitas
 - [ ] Status no plano
