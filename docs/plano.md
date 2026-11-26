@@ -31,7 +31,7 @@ A prioridade é o sistema (F1 a F6). Documentos e artigo vêm depois dele.
 |---|---|---|---|
 | F0 | Documento do projeto | sistema | depois do sistema |
 | F1 | Repositório e ambiente | metodologia v1.1 | concluída |
-| F2 | Preparação das bases | F1 | em desenvolvimento |
+| F2 | Preparação das bases | F1 | concluída |
 | F3 | Treino E1 e E2 | F2 | não iniciada |
 | F4 | Avaliação e teste entre bases | F3 | não iniciada |
 | F5 | Ponto de controle e CLP simulado | F1; modelo de F3 para integrar | em desenvolvimento |
@@ -158,3 +158,5 @@ Mínimo viável: F1 a F7.
 | 25/11/2026 | F5 | Portão de entrada: só vota o quadro com a pessoa inteira na imagem; igual para A e B | Evitar decisão com a pessoa ainda entrando |
 | 26/11/2026 | F5 | Libera só com uma pessoa, em quadro aprovado pelo portão; segunda pessoa retira a liberação (metodologia v1.3) | Falha nunca libera; aprovada pelo autor |
 | 26/11/2026 | F5 | Caixas repetidas da mesma classe contam como um objeto (metodologia v1.3) | Evitar par falso; aprovada pelo autor |
+| 26/11/2026 | F2 | Duplicatas: revisão visual até distância 10; distância 12 é duplicata sem revisão | Há duplicatas além de 10; aprovada pelo autor |
+| 26/11/2026 | F2 | Divisões congeladas em `configs/divisoes/`; não regenerar | Base comum de treino e avaliação |

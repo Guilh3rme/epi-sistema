@@ -167,52 +167,88 @@ e divergência interrompe a fase; as contagens após as remoções são registra
   preparação no Google Colab.
 
 ## Parte 2 — Encerramento
-- **Encerrada em:** —
+- **Encerrada em:** 26/11/2026
 
 ### O que foi feito
-Fase **em andamento**. Módulo `dados`, testes, configurações e notebook `01`, verificados
-localmente em modo curto (Construction-PPE e amostra do SH17).
+Módulo `dados`, testes, configurações e notebook `01`. Preparação completa no Colab
+(a execução final pela extensão do Colab no VS Code, commit `f38155e`) e divisões
+congeladas em `configs/divisoes/`.
 
 ### O que mudou em relação ao detalhamento (e por quê)
 - JPEG grande é decodificado já reduzido (mais rápido; diferença média de 0,7 nível de pixel).
 - A Construction-PPE é lida direto do zip, com validação dos nomes.
 - O pacote vai para o Drive logo após a preparação, antes das conferências, para não perder
   trabalho.
-- O plano B com `kagglehub` não foi implementado.
+- O plano B com `kagglehub` não foi necessário nem implementado.
 - YAML lido com o leitor do Ultralytics; PyYAML não é dependência. `numpy>=2` é exigido.
 - A preparação também para se uma dimensão divergir do VOC ou um rótulo sair de [0, 1].
-- **Duplicatas por precaução:** depois da revisão, pares com distância até 12
-  (`precaucao_ate`) passam a ser duplicatas sem revisão visual, com origem `precaucao` no
-  relatório. Com distância 10 ainda eram duplicatas 15 de 21 pares revisados.
+- **Duplicatas por precaução:** depois da revisão, pares com distância 12 (`precaucao_ate`)
+  passaram a ser duplicatas sem revisão visual, com origem `precaucao` no relatório. Com
+  distância 10 ainda eram duplicatas 15 de 21 pares revisados.
+- O envio do `revisao.csv` não alcançou o arquivo do Drive; ele foi regravado no notebook a
+  partir do arquivo local do autor, após conferir por SHA-256 que os pares eram os mesmos.
 
 ### Decisões tomadas
 | Decisão | Motivo | Permanente? (copiar para o plano) |
 |---|---|---|
-| Revisão visual até distância 10; distância 12 é duplicata sem revisão (aprovada pelo autor em 26/11/2026) | há duplicatas além de 10; opção cautelosa, os testes não perdem imagens | sim |
+| Revisão visual até distância 10; distância 12 é duplicata sem revisão (aprovada pelo autor) | há duplicatas além de 10; opção cautelosa, os testes não perdem imagens | sim |
+| Divisões de `configs/divisoes/` congeladas | base comum de treino e avaliação | sim |
 
 ### Resultados
-Execução local em modo curto: zip da Construction-PPE e as duas listas do SH17 conferidos por
-SHA-256; 6.479 e 1.620 nomes (SH17), 800 e 200 imagens (Construction-PPE); caixas iguais ao
-manifesto (11.902 e 2.961); famílias de nomes 707 e 293; 56 imagens do SH17 sem divergência
-com o VOC; as quatro vistas de teste lidas por `model.val`.
+Colab: download e MD5 do SH17 em 3,7 min; 8.099 imagens preparadas em 45,2 min; depois,
+restauração do pacote em 1,2 min.
 
-Achado: há um par treino x `val` da Construction-PPE (distância 6) com o mesmo cenário e
-pessoas diferentes, indício de cenas geradas reaproveitadas, que o pHash detecta mal. É uma
-limitação a declarar.
+**Conferências:** SH17 6.479 e 1.620 imagens, Construction-PPE 800 e 200; caixas das classes
+do projeto no SH17 iguais às do artigo (pessoa 13.802, capacete 927, óculos 1.945, luvas
+2.790, calçado 4.560, colete 530); caixas nativas da Construction-PPE iguais ao manifesto
+(11.902 e 2.961); nenhuma dimensão divergente do VOC nem rótulo fora da faixa; quatro vistas
+de teste lidas por `model.val`.
 
-No Colab: download e MD5 do SH17 em 3,7 min; 8.099 imagens preparadas em 45,2 min. Revisão
-do autor, 48 pares (distâncias 6 a 10): duplicatas em 8 de 9 (6), 16 de 18 (8) e 15 de 21
-(10). Pelo histograma, há cerca de 130 pares com distância 12. Fotos parecidas com
-distância maior podem permanecer: limitação a declarar.
+**Duplicatas:** 185 pares até distância 12. São 176 duplicatas: 6 automáticas (até 4), 39 das
+48 revisadas pelo autor (8 de 9 com distância 6, 16 de 18 com 8, 15 de 21 com 10) e 131 por
+precaução.
+
+| Lista | E1 | E2 |
+|---|---|---|
+| treino | 5.453 | 677 |
+| desenvolvimento | 962 | 120 |
+| removidas do treino | 64 | 3 |
+| teste interno | 1.620 | 200 |
+| teste entre bases | 1.000 | 1.620 |
+
+Não há par de duplicatas direto entre treino ou desenvolvimento e um teste, nem entre treino
+e desenvolvimento. Em cada experimento, 2 imagens mantidas se ligam a um teste só por uma
+cadeia de duplicatas. Há pares entre o teste interno e o teste entre bases (4 em E1, 2 em
+E2), mantidos porque os testes não perdem imagens. `pytest`: 88 testes passam.
+
+**Famílias da Construction-PPE:** `source-*` 293 imagens (234 e 59);
+`ultralytics-ppe-nov2026-*` 707 (566 e 141), em cinco formatos com 141 a 143 imagens cada,
+forte indício de geração.
+
+### Limitações
+- **Fotógrafos em comum no SH17:** 1.487 das 1.620 imagens de `val` (92%) são de fotógrafos
+  que também aparecem no treino (205 em comum). O teste interno de E1 é provavelmente
+  otimista. O teste não foi alterado.
+- Fotos parecidas com distância acima de 12 podem permanecer entre os conjuntos.
+- Há um par treino x `val` da Construction-PPE (distância 6) com o mesmo cenário e pessoas
+  diferentes, marcado como distinto na revisão: cenas reaproveitadas são mal detectadas pelo
+  pHash.
 
 ### Pendências
-- Executar `01_dados.ipynb` no Colab com `LIMIAR_APROVADO = (4, 10)`.
-- Trazer as divisões congeladas para `configs/divisoes/`.
-- Conferir as contagens após as remoções.
+- O autor estimar, em 50 imagens por família (`f2/familias/` no Drive), quantas parecem
+  geradas. Não bloqueia a F3.
 
 ### O que a próxima fase precisa saber
-Nada ainda: depende das divisões congeladas.
+- Bases preparadas: `MyDrive/epi-sistema/f2/bases_preparadas.tar` (manter no Drive);
+  restaurar com `dados.restaurar`.
+- Antes de treinar, `dados.listas_ultralytics(configs/divisoes, preparado)` confere as
+  impressões digitais e gera as listas de caminhos usadas pelos `configs/base_*.yaml`.
+- E1 usa 6 classes; E2, 11. Poucas caixas de colete (384) e capacete (673) no treino de E1;
+  E2 treina com apenas 677 imagens.
+- O teste entre bases é a evidência principal de generalização; os testes não escolhem modelo
+  nem parâmetro.
+
 ### Atualizações feitas
-- [ ] Status no plano
-- [ ] Decisões acumuladas no plano
+- [x] Status no plano
+- [x] Decisões acumuladas no plano
 - [ ] Metodologia (somente se houve mudança aprovada de método)

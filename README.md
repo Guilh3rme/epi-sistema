@@ -3,7 +3,7 @@
 Verificação de conformidade de EPI em ponto de controle de acesso, com visão computacional
 e integração à automação. Projeto de mestrado (PECS/UEMA).
 
-**Estado:** ambiente do projeto configurado. Ainda não há modelos treinados.
+**Estado:** bases preparadas e divisões congeladas. Ainda não há modelos treinados.
 
 - [Metodologia](docs/metodologia.md)
 - [Plano por fases](docs/plano.md)
@@ -38,11 +38,14 @@ pytest
 jupyter nbconvert --to notebook --execute notebooks/00_ambiente.ipynb --output-dir runs/executados
 ```
 
-## Preparação das bases (em desenvolvimento)
+## Preparação das bases
 
 Abra `notebooks/01_dados.ipynb` no Google Colab (sem GPU; deixe ao menos 4 GB livres no
 Drive) e execute tudo. A execução para de propósito para a revisão dos pares de imagens
 parecidas; siga as instruções do notebook. Parâmetros em `configs/dados.yaml`.
+
+As divisões congeladas estão em `configs/divisoes/`: nomes de arquivos, dimensões,
+impressões digitais e contagens, sem imagens.
 
 ## Ponto de controle (em desenvolvimento)
 

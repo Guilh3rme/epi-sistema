@@ -1,0 +1,186 @@
+a,b,distancia,identico,duplicata,origem,acao
+cppe/train/source-14bd7cec4f45ba3526e8219b69f10d7a.jpg,sh17/pexels-photo-13061689.jpeg,12,nao,sim,precaucao,e1: remove b
+cppe/train/source-3195fd14699725afdd2906e7293cc3c6.jpg,sh17/pexels-photo-9363131.jpeg,12,nao,sim,precaucao,e1: remove b
+cppe/train/source-3978abe9cfed5d8a5faa5a98dfe4b00a.jpg,cppe/train/source-efc23273c04e007083114c0f217335f0.jpg,12,nao,sim,precaucao,
+cppe/train/source-3978abe9cfed5d8a5faa5a98dfe4b00a.jpg,cppe/val/source-9e10b0409f922546c35b276eb5a5756e.jpg,12,nao,sim,precaucao,e2: remove a
+cppe/train/source-5245a69eda05ca8afade22f08bfbdce7.jpg,cppe/train/source-dc39994159adfb8e9c6bdafba4841c4b.jpg,12,nao,sim,precaucao,e2: agrupa
+cppe/train/source-94e6c9c9971c3352b61271256f014daf.jpg,sh17/pexels-photo-7964518.jpeg,12,nao,sim,precaucao,e1: remove b
+cppe/train/source-bfbb13f4dbe39c58cf7d0106cd8000f7.jpg,cppe/train/source-cc3e6e8b453515c1824fa91042214b71.jpg,12,nao,sim,precaucao,e2: agrupa
+cppe/train/source-efc23273c04e007083114c0f217335f0.jpg,cppe/val/source-9e10b0409f922546c35b276eb5a5756e.jpg,6,nao,nao,revisao,
+cppe/train/ultralytics-ppe-nov2026-065.jpg,sh17/pexels-photo-6837651.jpeg,12,nao,sim,precaucao,e1: remove b
+cppe/train/ultralytics-ppe-nov2026-087.jpg,cppe/train/ultralytics-ppe-nov2026-687.jpg,12,nao,sim,precaucao,e2: agrupa
+cppe/train/ultralytics-ppe-nov2026-278.jpg,sh17/pexels-photo-6931022.jpeg,12,nao,sim,precaucao,e1: remove b
+cppe/train/ultralytics-ppe-nov2026-279.jpg,sh17/pexels-photo-7282661.jpeg,12,nao,sim,precaucao,e1: remove b
+cppe/train/ultralytics-ppe-nov2026-304.jpg,sh17/pexels-photo-4622398.jpeg,12,nao,sim,precaucao,e2: remove a
+cppe/train/ultralytics-ppe-nov2026-370.jpg,cppe/train/ultralytics-ppe-nov2026-482.jpg,12,nao,sim,precaucao,e2: agrupa
+cppe/train/ultralytics-ppe-nov2026-384.jpg,sh17/pexels-photo-7688080.jpeg,12,nao,sim,precaucao,e1: remove b
+cppe/train/ultralytics-ppe-nov2026-463.jpg,sh17/pexels-photo-6587167.jpeg,12,nao,sim,precaucao,e1: remove b
+cppe/train/ultralytics-ppe-nov2026-508.jpg,sh17/pexels-photo-14012679.jpeg,12,nao,sim,precaucao,e1: remove b
+cppe/train/ultralytics-ppe-nov2026-533.jpg,cppe/train/ultralytics-ppe-nov2026-694.jpg,12,nao,sim,precaucao,e2: agrupa
+cppe/train/ultralytics-ppe-nov2026-619.jpg,sh17/pexels-photo-5493659.jpeg,12,nao,sim,precaucao,e2: remove a
+cppe/train/ultralytics-ppe-nov2026-638.jpg,sh17/pexels-photo-11486454.jpeg,12,nao,sim,precaucao,e1: remove b
+cppe/train/ultralytics-ppe-nov2026-685.jpg,sh17/pexels-photo-3066772.jpeg,10,nao,nao,revisao,
+cppe/train/ultralytics-ppe-nov2026-703.jpg,sh17/pexels-photo-7015111.jpeg,12,nao,sim,precaucao,e1: remove b
+cppe/val/source-49167518cb619cd5c12a8f33872f9b7e.jpg,sh17/pexels-photo-7716936.jpeg,12,nao,sim,precaucao,e1: remove b
+cppe/val/source-ab1fb85dccb8e6325a99fca62a476ef7.jpg,sh17/pexels-photo-3872420.jpeg,12,nao,sim,precaucao,
+cppe/val/ultralytics-ppe-nov2026-123.jpg,sh17/pexels-photo-6196696.jpeg,12,nao,sim,precaucao,e1: remove b
+cppe/val/ultralytics-ppe-nov2026-673.jpg,sh17/pexels-photo-4571218.jpeg,12,nao,sim,precaucao,e1: remove b
+cppe/val/ultralytics-ppe-nov2026-673.jpg,sh17/pexels-photo-8691836.jpeg,12,nao,sim,precaucao,e1: remove b
+cppe/val/ultralytics-ppe-nov2026-675.jpg,sh17/pexels-photo-1797415.jpeg,12,nao,sim,precaucao,
+sh17/pexels-photo-10133578.jpeg,sh17/pexels-photo-4349959.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-10375932.jpeg,sh17/pexels-photo-10375944.jpeg,10,nao,sim,revisao,e1: remove b
+sh17/pexels-photo-10676692.jpeg,sh17/pexels-photo-7675999.jpeg,10,nao,nao,revisao,
+sh17/pexels-photo-11794944.jpeg,sh17/pexels-photo-12571281.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-1181624.jpeg,sh17/pexels-photo-8539643.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-11890197.jpeg,sh17/pexels-photo-11902999.jpeg,10,nao,sim,revisao,e1: agrupa
+sh17/pexels-photo-12203611.jpeg,sh17/pexels-photo-12203618.jpeg,10,nao,sim,revisao,e1: agrupa
+sh17/pexels-photo-12254989.jpeg,sh17/pexels-photo-13098743.jpeg,12,nao,sim,precaucao,e1: remove a
+sh17/pexels-photo-12733.jpeg,sh17/pexels-photo-12911217.jpeg,12,nao,sim,precaucao,e1: remove a
+sh17/pexels-photo-12899084.jpeg,sh17/pexels-photo-7674914.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-12902906.jpeg,sh17/pexels-photo-12902907.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-12902909.jpeg,sh17/pexels-photo-6205609.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-12902922.jpeg,sh17/pexels-photo-12902925.jpeg,12,nao,sim,precaucao,e1: remove a
+sh17/pexels-photo-12903298.jpeg,sh17/pexels-photo-8205103.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-12911959.jpeg,sh17/pexels-photo-6129441.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-13319075.jpeg,sh17/pexels-photo-7190631.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-13801586.jpeg,sh17/pexels-photo-8829883.jpeg,12,nao,sim,precaucao,e1: remove a
+sh17/pexels-photo-13914845.jpeg,sh17/pexels-photo-6341590.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-14012679.jpeg,sh17/pexels-photo-14012695.jpeg,8,nao,sim,revisao,e1: remove a
+sh17/pexels-photo-14189337.jpeg,sh17/pexels-photo-14189341.jpeg,4,nao,sim,automatica,e1: agrupa
+sh17/pexels-photo-14557579.jpeg,sh17/pexels-photo-8985696.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-1474993.jpeg,sh17/pexels-photo-5089163.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-15016509.jpeg,sh17/pexels-photo-5273608.jpeg,12,nao,sim,precaucao,e1: remove a
+sh17/pexels-photo-15200451.jpeg,sh17/pexels-photo-6348120.jpeg,12,nao,sim,precaucao,e1: remove a
+sh17/pexels-photo-16793933.jpeg,sh17/pexels-photo-901941.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-1797415.jpeg,sh17/pexels-photo-4904537.jpeg,12,nao,sim,precaucao,e1: remove b
+sh17/pexels-photo-18039746.jpeg,sh17/pexels-photo-4560175.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-209271.jpeg,sh17/pexels-photo-6195291.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-2247138.jpeg,sh17/pexels-photo-5831256.jpeg,12,nao,sim,precaucao,e1: remove a
+sh17/pexels-photo-2760344.jpeg,sh17/pexels-photo-8942124.jpeg,12,nao,sim,precaucao,e1: remove b
+sh17/pexels-photo-2873016.jpeg,sh17/pexels-photo-6231994.jpeg,10,nao,nao,revisao,
+sh17/pexels-photo-2898199.jpeg,sh17/pexels-photo-6169589.jpeg,12,nao,sim,precaucao,e1: remove a
+sh17/pexels-photo-3084330.jpeg,sh17/pexels-photo-4488652.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-320621.jpeg,sh17/pexels-photo-4622205.jpeg,12,nao,sim,precaucao,e1: remove b
+sh17/pexels-photo-3736109.jpeg,sh17/pexels-photo-6312083.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-3752084.jpeg,sh17/pexels-photo-3846583.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-3772616.jpeg,sh17/pexels-photo-4484075.jpeg,12,nao,sim,precaucao,e1: remove b
+sh17/pexels-photo-3794747.jpeg,sh17/pexels-photo-9077370.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-3822900.jpeg,sh17/pexels-photo-4489767.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-3823225.jpeg,sh17/pexels-photo-3823415.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-3831159.jpeg,sh17/pexels-photo-5089163.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-3846258.jpeg,sh17/pexels-photo-3846262.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-3861948.jpeg,sh17/pexels-photo-6961085.jpeg,10,nao,nao,revisao,
+sh17/pexels-photo-3863787.jpeg,sh17/pexels-photo-3863788.jpeg,8,nao,sim,revisao,e1: agrupa
+sh17/pexels-photo-3867837.jpeg,sh17/pexels-photo-3867841.jpeg,8,nao,sim,revisao,e1: agrupa
+sh17/pexels-photo-3872420.jpeg,sh17/pexels-photo-3872453.jpeg,8,nao,sim,revisao,e1: remove b
+sh17/pexels-photo-3873735.jpeg,sh17/pexels-photo-3873743.jpeg,10,nao,sim,revisao,
+sh17/pexels-photo-3873743.jpeg,sh17/pexels-photo-3873745.jpeg,10,nao,sim,revisao,e1: remove a
+sh17/pexels-photo-3884133.jpeg,sh17/pexels-photo-3884140.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-3966265.jpeg,sh17/pexels-photo-8101985.jpeg,12,nao,sim,precaucao,e1: remove a
+sh17/pexels-photo-4021816.jpeg,sh17/pexels-photo-4021819.jpeg,4,nao,sim,automatica,e1: remove b
+sh17/pexels-photo-4082524.jpeg,sh17/pexels-photo-8292785.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-4226207.jpeg,sh17/pexels-photo-4226257.jpeg,12,nao,sim,precaucao,e1: remove a
+sh17/pexels-photo-4226207.jpeg,sh17/pexels-photo-5410071.jpeg,12,nao,sim,precaucao,
+sh17/pexels-photo-4226257.jpeg,sh17/pexels-photo-5410071.jpeg,12,nao,sim,precaucao,e1: remove b
+sh17/pexels-photo-4226258.jpeg,sh17/pexels-photo-4918099.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-4227090.jpeg,sh17/pexels-photo-5256135.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-4307818.jpeg,sh17/pexels-photo-4307821.jpeg,6,nao,sim,revisao,
+sh17/pexels-photo-4349737.jpeg,sh17/pexels-photo-4349751.jpeg,10,nao,sim,revisao,e1: agrupa
+sh17/pexels-photo-4349750.jpeg,sh17/pexels-photo-4349950.jpeg,8,nao,sim,revisao,e1: agrupa
+sh17/pexels-photo-4349833.jpeg,sh17/pexels-photo-6837637.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-4350039.jpeg,sh17/pexels-photo-4350041.jpeg,10,nao,sim,revisao,e1: agrupa
+sh17/pexels-photo-4353602.jpeg,sh17/pexels-photo-4353604.jpeg,6,nao,sim,revisao,e1: remove b
+sh17/pexels-photo-4473489.jpeg,sh17/pexels-photo-4473496.jpeg,6,nao,sim,revisao,e1: remove b
+sh17/pexels-photo-4481528.jpeg,sh17/pexels-photo-4481529.jpeg,12,nao,sim,precaucao,e1: remove b
+sh17/pexels-photo-4483557.jpeg,sh17/pexels-photo-8447788.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-4483611.jpeg,sh17/pexels-photo-4483614.jpeg,6,nao,sim,revisao,e1: agrupa
+sh17/pexels-photo-4487421.jpeg,sh17/pexels-photo-4487446.jpeg,12,nao,sim,precaucao,e1: remove b
+sh17/pexels-photo-4544167.jpeg,sh17/pexels-photo-5974242.jpeg,12,nao,sim,precaucao,e1: remove b
+sh17/pexels-photo-4559617.jpeg,sh17/pexels-photo-7065278.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-4559620.jpeg,sh17/pexels-photo-4559622.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-4559622.jpeg,sh17/pexels-photo-4888381.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-4559736.jpeg,sh17/pexels-photo-4559740.jpeg,2,nao,sim,automatica,e1: remove b
+sh17/pexels-photo-4559739.jpeg,sh17/pexels-photo-4559742.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-4559740.jpeg,sh17/pexels-photo-4559743.jpeg,12,nao,sim,precaucao,e1: remove a
+sh17/pexels-photo-4559749.jpeg,sh17/pexels-photo-4559750.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-4560058.jpeg,sh17/pexels-photo-4560061.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-4560067.jpeg,sh17/pexels-photo-4560078.jpeg,8,nao,sim,revisao,e1: agrupa
+sh17/pexels-photo-4560071.jpeg,sh17/pexels-photo-6790043.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-4621908.jpeg,sh17/pexels-photo-9870160.jpeg,12,nao,sim,precaucao,e1: remove b
+sh17/pexels-photo-4622217.jpeg,sh17/pexels-photo-5863362.jpeg,10,nao,nao,revisao,
+sh17/pexels-photo-4623508.jpeg,sh17/pexels-photo-4623509.jpeg,12,nao,sim,precaucao,e1: remove a
+sh17/pexels-photo-4737984.jpeg,sh17/pexels-photo-4737985.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-4737988.jpeg,sh17/pexels-photo-7018657.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-4820775.jpeg,sh17/pexels-photo-4820783.jpeg,4,nao,sim,automatica,e1: agrupa
+sh17/pexels-photo-4904566.jpeg,sh17/pexels-photo-9870160.jpeg,12,nao,sim,precaucao,
+sh17/pexels-photo-4957356.jpeg,sh17/pexels-photo-6205520.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-4962985.jpeg,sh17/pexels-photo-4962994.jpeg,8,nao,sim,revisao,e1: agrupa
+sh17/pexels-photo-4981770.jpeg,sh17/pexels-photo-5726796.jpeg,12,nao,sim,precaucao,e1: remove b
+sh17/pexels-photo-5059641.jpeg,sh17/pexels-photo-5998506.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-5089132.jpeg,sh17/pexels-photo-6347740.jpeg,12,nao,sim,precaucao,e1: remove b
+sh17/pexels-photo-5215009.jpeg,sh17/pexels-photo-8872672.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-5239791.jpeg,sh17/pexels-photo-5973912.jpeg,10,nao,nao,revisao,
+sh17/pexels-photo-5239950.jpeg,sh17/pexels-photo-5998479.jpeg,12,nao,sim,precaucao,e1: remove a
+sh17/pexels-photo-5324880.jpeg,sh17/pexels-photo-5324884.jpeg,6,nao,sim,revisao,e1: agrupa
+sh17/pexels-photo-5324915.jpeg,sh17/pexels-photo-8961551.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-5409671.jpeg,sh17/pexels-photo-5409679.jpeg,8,nao,sim,revisao,e1: remove b
+sh17/pexels-photo-5409683.jpeg,sh17/pexels-photo-5409687.jpeg,12,nao,sim,precaucao,
+sh17/pexels-photo-5409703.jpeg,sh17/pexels-photo-5409704.jpeg,10,nao,sim,revisao,e1: remove b
+sh17/pexels-photo-5409713.jpeg,sh17/pexels-photo-5409714.jpeg,10,nao,sim,revisao,e1: agrupa
+sh17/pexels-photo-5410089.jpeg,sh17/pexels-photo-5410090.jpeg,10,nao,sim,revisao,e1: remove a
+sh17/pexels-photo-5414329.jpeg,sh17/pexels-photo-6130135.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-5439476.jpeg,sh17/pexels-photo-5439480.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-5493656.jpeg,sh17/pexels-photo-7219184.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-5642030.jpeg,sh17/pexels-photo-6129974.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-5648432.jpeg,sh17/pexels-photo-8642040.jpeg,12,nao,sim,precaucao,e1: remove a
+sh17/pexels-photo-5668767.jpeg,sh17/pexels-photo-5668771.jpeg,10,nao,sim,revisao,e1: remove b
+sh17/pexels-photo-5668887.jpeg,sh17/pexels-photo-9034242.jpeg,12,nao,sim,precaucao,e1: remove b
+sh17/pexels-photo-5691669.jpeg,sh17/pexels-photo-872732.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-5710847.jpeg,sh17/pexels-photo-7532006.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-5720982.jpeg,sh17/pexels-photo-8853472.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-5726795.jpeg,sh17/pexels-photo-5726837.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-5863365.jpeg,sh17/pexels-photo-5863370.jpeg,8,nao,sim,revisao,e1: agrupa
+sh17/pexels-photo-5905901.jpeg,sh17/pexels-photo-6749778.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-5931817.jpeg,sh17/pexels-photo-7675007.jpeg,8,nao,nao,revisao,
+sh17/pexels-photo-5974012.jpeg,sh17/pexels-photo-6197116.jpeg,10,nao,sim,revisao,
+sh17/pexels-photo-5974058.jpeg,sh17/pexels-photo-8538703.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-5998470.jpeg,sh17/pexels-photo-7579367.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-5999794.jpeg,sh17/pexels-photo-7904492.jpeg,12,nao,sim,precaucao,
+sh17/pexels-photo-6129454.jpeg,sh17/pexels-photo-7089392.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-6129962.jpeg,sh17/pexels-photo-6129974.jpeg,6,nao,sim,revisao,e1: agrupa
+sh17/pexels-photo-6140132.jpeg,sh17/pexels-photo-6140134.jpeg,4,nao,sim,automatica,e1: remove a
+sh17/pexels-photo-6177615.jpeg,sh17/pexels-photo-6177617.jpeg,8,nao,sim,revisao,e1: agrupa
+sh17/pexels-photo-6205487.jpeg,sh17/pexels-photo-9363113.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-6205511.jpeg,sh17/pexels-photo-6205516.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-6205724.jpeg,sh17/pexels-photo-6205726.jpeg,12,nao,sim,precaucao,e1: remove b
+sh17/pexels-photo-6231701.jpeg,sh17/pexels-photo-6231702.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-6243337.jpeg,sh17/pexels-photo-6243345.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-6348120.jpeg,sh17/pexels-photo-7675007.jpeg,8,nao,nao,revisao,
+sh17/pexels-photo-6457476.jpeg,sh17/pexels-photo-6457480.jpeg,12,nao,sim,precaucao,e1: remove a
+sh17/pexels-photo-6474458.jpeg,sh17/pexels-photo-6474497.jpeg,12,nao,sim,precaucao,e1: remove b
+sh17/pexels-photo-6888767.jpeg,sh17/pexels-photo-7241372.jpeg,12,nao,sim,precaucao,e1: remove b
+sh17/pexels-photo-6961120.jpeg,sh17/pexels-photo-6961122.jpeg,8,nao,sim,revisao,e1: agrupa
+sh17/pexels-photo-6964070.jpeg,sh17/pexels-photo-6964072.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-7013079.jpeg,sh17/pexels-photo-7013085.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-7014669.jpeg,sh17/pexels-photo-7014670.jpeg,6,nao,sim,revisao,e1: remove b
+sh17/pexels-photo-7019371.jpeg,sh17/pexels-photo-8829873.jpeg,12,nao,sim,precaucao,e1: remove a
+sh17/pexels-photo-7065266.jpeg,sh17/pexels-photo-7065278.jpeg,10,nao,sim,revisao,e1: agrupa
+sh17/pexels-photo-7245755.jpeg,sh17/pexels-photo-7245757.jpeg,8,nao,sim,revisao,e1: agrupa
+sh17/pexels-photo-7278863.jpeg,sh17/pexels-photo-7278870.jpeg,8,nao,sim,revisao,e1: agrupa
+sh17/pexels-photo-7579319.jpeg,sh17/pexels-photo-7579320.jpeg,10,nao,sim,revisao,e1: remove b
+sh17/pexels-photo-7579367.jpeg,sh17/pexels-photo-7675860.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-7640484.jpeg,sh17/pexels-photo-7640765.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-7652330.jpeg,sh17/pexels-photo-7652345.jpeg,12,nao,sim,precaucao,e1: remove b
+sh17/pexels-photo-7674903.jpeg,sh17/pexels-photo-7709269.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-7681565.jpeg,sh17/pexels-photo-9068370.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-7688156.jpeg,sh17/pexels-photo-7688161.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-8067886.jpeg,sh17/pexels-photo-8067889.jpeg,8,nao,sim,revisao,e1: remove a
+sh17/pexels-photo-8134186.jpeg,sh17/pexels-photo-8134194.jpeg,8,nao,sim,revisao,e1: remove b
+sh17/pexels-photo-8204944.jpeg,sh17/pexels-photo-8204945.jpeg,4,nao,sim,automatica,e1: agrupa
+sh17/pexels-photo-8205092.jpeg,sh17/pexels-photo-8205100.jpeg,8,nao,sim,revisao,e1: remove a
+sh17/pexels-photo-8246487.jpeg,sh17/pexels-photo-8246488.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-8257856.jpeg,sh17/pexels-photo-8257861.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-8961152.jpeg,sh17/pexels-photo-8985709.jpeg,12,nao,sim,precaucao,e1: remove b
+sh17/pexels-photo-9063398.jpeg,sh17/pexels-photo-9063401.jpeg,10,nao,sim,revisao,e1: agrupa
+sh17/pexels-photo-9077992.jpeg,sh17/pexels-photo-9078004.jpeg,12,nao,sim,precaucao,e1: agrupa
+sh17/pexels-photo-9363116.jpeg,sh17/pexels-photo-9363150.jpeg,6,nao,sim,revisao,e1: agrupa
