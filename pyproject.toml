@@ -10,7 +10,7 @@ readme = "README.md"
 license = "AGPL-3.0-only"
 requires-python = ">=3.10"
 # torch fica de fora: no Colab usa-se o pré-instalado; localmente, ver README.
-dependencies = ["ultralytics==8.4.219"]
+dependencies = ["ultralytics==8.4.219", "pymodbus==3.16.2"]
 
 [project.optional-dependencies]
 dev = ["pytest", "ipykernel", "nbconvert", "nbstripout"]

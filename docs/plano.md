@@ -1,6 +1,6 @@
-# Plano faseado (v1.1)
+# Plano faseado (v1.2)
 
-Segue a [metodologia v1.1](metodologia.md), que é a fonte de verdade. Este plano é
+Segue a [metodologia v1.2](metodologia.md), que é a fonte de verdade. Este plano é
 **macro**: tarefas, arquivos, parâmetros e entregáveis de cada fase são definidos só quando
 a fase começa, em `docs/fases/fase-N.md` (modelo em [fases/_modelo.md](fases/_modelo.md)).
 
@@ -31,10 +31,10 @@ A prioridade é o sistema (F1 a F6). Documentos e artigo vêm depois dele.
 |---|---|---|---|
 | F0 | Documento do projeto | sistema | depois do sistema |
 | F1 | Repositório e ambiente | metodologia v1.1 | concluída |
-| F2 | Preparação das bases | F1 | não iniciada |
+| F2 | Preparação das bases | F1 | em desenvolvimento |
 | F3 | Treino E1 e E2 | F2 | não iniciada |
 | F4 | Avaliação e teste entre bases | F3 | não iniciada |
-| F5 | Ponto de controle e CLP simulado | F1; modelo de F3 para integrar | não iniciada |
+| F5 | Ponto de controle e CLP simulado | F1; modelo de F3 para integrar | em desenvolvimento |
 | F6 | Gravações de calibração e de teste | F4, F5 | não iniciada |
 | F7 | Consolidação dos resultados | F6 | não iniciada |
 | F8 | Extensão: comparações e intervalos de confiança | F7 | não iniciada |
@@ -87,7 +87,8 @@ Mínimo viável: F1 a F7.
 - **Passa adiante quando:** tabelas de E1 e E2 registradas, separando classes principais
   (pessoa, capacete, colete, luvas) das exploratórias (calçado, óculos).
 - **Perguntas:** limiares de confiança e IoU fixados em desenvolvimento? Como definir
-  faixas de tamanho? Formato das tabelas?
+  faixas de tamanho (por área relativa da caixa, pois as bases têm resoluções nativas
+  diferentes)? Formato das tabelas?
 
 ### F5 — Ponto de controle e CLP simulado (paralela a F2–F4)
 - **Objetivo:** fluxo câmera → pessoa e pose → detecção → associação (A e B) → votação em N
@@ -152,3 +153,6 @@ Mínimo viável: F1 a F7.
 | 25/11/2026 | F1 | Repositório público no GitHub, código sob AGPL-3.0 | Escolha do autor; licença do Ultralytics |
 | 25/11/2026 | F1 | Ultralytics 8.4.219; PyTorch do Colab não é substituído | Reprodutibilidade sem conflito de CUDA |
 | 25/11/2026 | F1 | Configuração, bases e resultados do Ultralytics dentro do projeto (`configurar_ultralytics()`) | Evitar arquivos fora do repositório |
+| 25/11/2026 | F2 | Cópia com lado maior 1280; 15% de desenvolvimento; E1 com 6 classes e E2 com 11; preparação no Colab; pacote `.tar` no Drive | Detalhamento aprovado |
+| 25/11/2026 | F5 | Luvas e calçado exigem os dois lados (metodologia v1.2) | Escolha do autor |
+| 25/11/2026 | F5 | Portão de entrada: só vota o quadro com a pessoa inteira na imagem; igual para A e B | Evitar decisão com a pessoa ainda entrando |

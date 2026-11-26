@@ -1,7 +1,7 @@
-# Metodologia do projeto (v1.1)
+# Metodologia do projeto (v1.2)
 
 **Aprovada pelo aluno em 25/11/2026.** v1.1: as duas associações entram no mesmo teste e os
-vídeos de pesquisa ficam locais. A definir com o orientador: dispensa do Comitê de
+vídeos de pesquisa ficam locais. v1.2: luvas e calçado exigem os dois lados. A definir com o orientador: dispensa do Comitê de
 Ética nas gravações só com o autor e metas de liberação indevida e de indeterminados.
 
 Estrutura alinhada aos itens do Art. 22, §6º do Regimento do PECS.
@@ -87,6 +87,8 @@ oclusão e distâncias variadas; fica como trabalho futuro.
 - **Pose:** modelo pré-treinado, sem treino próprio (cabeça, olhos, mãos, tronco, pés).
 - **Associação A (base):** EPI contido na caixa da pessoa.
 - **Associação B:** EPI na região do corpo correspondente.
+- **Itens em par:** luvas e calçado só contam como presentes com os dois lados, cada um com
+  uma detecção própria.
 - **Votação temporal:** estado de cada EPI definido em uma janela de N quadros.
 - **Decisão:** `LIBERADO`, `BLOQUEADO` ou `INDETERMINADO` (corpo não visível, baixa
   confiança, falha de câmera). Indeterminado **não libera** e pede conferência humana.
