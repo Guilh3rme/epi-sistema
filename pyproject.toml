@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "epi"
+version = "0.1.0"
+description = "Verificação de conformidade de EPI em ponto de controle de acesso"
+readme = "README.md"
+license = "AGPL-3.0-only"
+requires-python = ">=3.10"
+# torch fica de fora: no Colab usa-se o pré-instalado; localmente, ver README.
+dependencies = ["ultralytics==8.4.219"]
+
+[project.optional-dependencies]
+dev = ["pytest", "ipykernel", "nbconvert", "nbstripout"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

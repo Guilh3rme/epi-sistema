@@ -1,0 +1,12 @@
+data/
+runs/
+*.pt
+*.onnx
+*.mp4
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.env
+kaggle.json
+*.egg-info/
+.pytest_cache/
