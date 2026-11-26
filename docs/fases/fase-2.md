@@ -75,7 +75,8 @@ Construction-PPE, também pela família do nome do arquivo. Testes não mudam:
 pHash de 64 bits sobre a cópia preparada, em todos os pares das 9.099 imagens. Distância de
 Hamming até 4: duplicata; de 5 a 10: revisão visual do autor; acima de 10: distinta. O
 histograma é inspecionado e o limiar final registrado antes de dividir. Implementação com
-`cv2.dct`, do OpenCV já instalado, sem dependência nova.
+`cv2.dct`, do OpenCV já instalado, sem dependência nova. Alterado após a revisão (Parte 2):
+distância 12 também é duplicata, sem revisão visual.
 
 **(decisão)** A imagem sai das listas de treino/desenvolvimento do experimento cujo teste
 (interno ou entre bases) contém o par dela, antes de separar o desenvolvimento. Outros pares
@@ -180,10 +181,14 @@ localmente em modo curto (Construction-PPE e amostra do SH17).
 - O plano B com `kagglehub` não foi implementado.
 - YAML lido com o leitor do Ultralytics; PyYAML não é dependência. `numpy>=2` é exigido.
 - A preparação também para se uma dimensão divergir do VOC ou um rótulo sair de [0, 1].
+- **Duplicatas por precaução:** depois da revisão, pares com distância até 12
+  (`precaucao_ate`) passam a ser duplicatas sem revisão visual, com origem `precaucao` no
+  relatório. Com distância 10 ainda eram duplicatas 15 de 21 pares revisados.
 
 ### Decisões tomadas
 | Decisão | Motivo | Permanente? (copiar para o plano) |
 |---|---|---|
+| Revisão visual até distância 10; distância 12 é duplicata sem revisão (aprovada pelo autor em 26/11/2026) | há duplicatas além de 10; opção cautelosa, os testes não perdem imagens | sim |
 
 ### Resultados
 Execução local em modo curto: zip da Construction-PPE e as duas listas do SH17 conferidos por
@@ -195,11 +200,15 @@ Achado: há um par treino x `val` da Construction-PPE (distância 6) com o mesmo
 pessoas diferentes, indício de cenas geradas reaproveitadas, que o pHash detecta mal. É uma
 limitação a declarar.
 
+No Colab: download e MD5 do SH17 em 3,7 min; 8.099 imagens preparadas em 45,2 min. Revisão
+do autor, 48 pares (distâncias 6 a 10): duplicatas em 8 de 9 (6), 16 de 18 (8) e 15 de 21
+(10). Pelo histograma, há cerca de 130 pares com distância 12. Fotos parecidas com
+distância maior podem permanecer: limitação a declarar.
+
 ### Pendências
-- Executar `01_dados.ipynb` no Colab, revisar os pares de distância 5 a 10 e aprovar o limiar.
+- Executar `01_dados.ipynb` no Colab com `LIMIAR_APROVADO = (4, 10)`.
 - Trazer as divisões congeladas para `configs/divisoes/`.
-- Só o Colab confirma: acesso anônimo ao Kaggle, MD5 do zip, disco, contagem completa do SH17
-  e escrita no Drive.
+- Conferir as contagens após as remoções.
 
 ### O que a próxima fase precisa saber
 Nada ainda: depende das divisões congeladas.

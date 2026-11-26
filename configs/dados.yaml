@@ -10,6 +10,7 @@ copia:
 phash:
   duplicata_ate: 4
   revisao_ate: 10
+  precaucao_ate: 12  # acima de revisao_ate e até aqui: duplicata sem revisão visual
 
 espaco_livre_gb: 25  # exigido no Colab antes de baixar o SH17
 

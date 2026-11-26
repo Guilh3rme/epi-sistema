@@ -130,6 +130,12 @@ def test_revisao_preserva_decisoes_e_exige_todas(tmp_path):
     assert [p["duplicata"] for p in marcados] == [True, True, True]
     assert not dados.decidir(pares, {}, 4, 6)[1]["duplicata"]  # faixa reduzida
 
+    # Precaução: vale só acima da revisão e não troca um "nao" do autor.
+    outros = [par("a", "c", 10), par("a", "d", 12), par("a", "e", 14)]
+    marcados = dados.decidir(outros, {("a", "c"): False}, 4, 10, 12)
+    assert [(p["duplicata"], p["origem"]) for p in marcados] == [
+        (False, "revisao"), (True, "precaucao"), (False, "acima do limiar")]
+
     arquivo.write_text("n,distancia,a,b,duplicata\n1,7,a,c,talvez\n", encoding="utf-8")
     with pytest.raises(ValueError, match="sim ou nao"):
         dados.ler_decisoes(arquivo)

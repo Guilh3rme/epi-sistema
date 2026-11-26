@@ -429,8 +429,12 @@ def ler_decisoes(caminho: str | Path) -> dict[tuple[str, str], bool]:
     return decisoes
 
 
-def decidir(pares: list[dict], decisoes: dict, duplicata_ate: int, revisao_ate: int) -> list[dict]:
-    """Marca cada par como duplicata ou não; interrompe se faltar decisão na faixa."""
+def decidir(pares: list[dict], decisoes: dict, duplicata_ate: int, revisao_ate: int,
+            precaucao_ate: int = 0) -> list[dict]:
+    """Marca cada par como duplicata ou não; interrompe se faltar decisão na faixa de revisão.
+
+    Acima de `revisao_ate` e até `precaucao_ate`, o par é duplicata sem revisão visual.
+    """
     marcados, pendentes = [], 0
     for par in pares:
         if par["identico"] or par["distancia"] <= duplicata_ate:
@@ -438,6 +442,8 @@ def decidir(pares: list[dict], decisoes: dict, duplicata_ate: int, revisao_ate: 
         elif par["distancia"] <= revisao_ate:
             duplicata, origem = decisoes.get((par["a"], par["b"])), "revisao"
             pendentes += duplicata is None
+        elif par["distancia"] <= precaucao_ate:
+            duplicata, origem = True, "precaucao"
         else:
             duplicata, origem = False, "acima do limiar"
         marcados.append(par | {"duplicata": duplicata, "origem": origem})
