@@ -86,6 +86,8 @@ A fase só encerra depois da execução no Colab.
 - **Encerrada em:**
 
 ### O que foi feito
+Estrutura do repositório, pacote `epi`, notebook `00_ambiente`, testes, licença e
+publicação no GitHub. Falta a execução no Colab para encerrar a fase.
 
 ### O que mudou em relação ao detalhamento (e por quê)
 - Repositório público: o Colab clona sem token do GitHub.
@@ -98,10 +100,16 @@ A fase só encerra depois da execução no Colab.
 |---|---|---|
 
 ### Resultados
+Execução local em 25/11/2026: Python 3.13.18, PyTorch 2.14.1+cu130, torchvision 0.29.1,
+Ultralytics 8.4.219, RTX 4060 Ti. Dois testes passam; o notebook `00` executa do início ao
+fim, também a partir de um clone limpo do repositório (usando o ambiente local).
 
 ### Pendências
+- Executar `00_ambiente.ipynb` no Google Colab com GPU e registrar a saída.
 
 ### O que a próxima fase precisa saber
+- Chamar `configurar_ultralytics()` antes de importar `ultralytics`; bases ficam em `data/`.
+- Os notebooks são gravados sem saídas (`nbstripout`).
 
 ### Atualizações feitas
 - [ ] Status no plano

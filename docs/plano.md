@@ -30,7 +30,7 @@ A prioridade é o sistema (F1 a F6). Documentos e artigo vêm depois dele.
 | Fase | Nome | Depende de | Status |
 |---|---|---|---|
 | F0 | Documento do projeto | sistema | depois do sistema |
-| F1 | Repositório e ambiente | metodologia v1.1 | em desenvolvimento |
+| F1 | Repositório e ambiente | metodologia v1.1 | falta a execução no Colab |
 | F2 | Preparação das bases | F1 | não iniciada |
 | F3 | Treino E1 e E2 | F2 | não iniciada |
 | F4 | Avaliação e teste entre bases | F3 | não iniciada |
