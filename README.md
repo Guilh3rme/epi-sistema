@@ -38,6 +38,17 @@ pytest
 jupyter nbconvert --to notebook --execute notebooks/00_ambiente.ipynb --output-dir runs/executados
 ```
 
+## Ponto de controle (em desenvolvimento)
+
+```powershell
+python -m epi.clp            # CLP simulado em 127.0.0.1:5020
+jupyter nbconvert --to notebook --execute notebooks/05_ponto_de_controle.ipynb --output-dir runs/executados
+```
+
+Parâmetros em `configs/ponto_de_controle.yaml` (provisórios). Sem um modelo de EPI treinado,
+a demonstração usa um detector roteirizado. O sistema é apoio ao controle de acesso e
+**não é uma função de segurança certificada**.
+
 ## Regras
 
 Imagens, vídeos, pesos e credenciais não entram no repositório. As saídas dos notebooks são

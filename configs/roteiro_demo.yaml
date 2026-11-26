@@ -1,0 +1,41 @@
+# Teste de nível 2 (Fase 5): pessoa e pose reais, EPIs fictícios.
+# O vídeo repete o recorte do homem ao centro de bus.jpg (exemplo do Ultralytics), e as
+# caixas dos itens são frações da caixa da pessoa, posicionadas à mão sobre a imagem.
+recorte: [222, 404, 345, 861]  # x1, y1, x2, y2 em bus.jpg
+quadro: [576, 576]             # largura, altura
+fps: 30
+
+# Esperado (passagem: A / B):
+#   1 LIBERADO / LIBERADO          2 BLOQUEADO / BLOQUEADO (sem capacete)
+#   3 INDETERMINADO / INDETERMINADO (capacete com baixa confiança)
+#   4 LIBERADO / BLOQUEADO (capacete na mão)
+itens:
+  capacete: {classe: capacete, conf: 0.9, caixa: [0.31, 0.00, 0.72, 0.053]}
+  capacete_fraco: {classe: capacete, conf: 0.35, caixa: [0.31, 0.00, 0.72, 0.053]}
+  capacete_na_mao: {classe: capacete, conf: 0.9, caixa: [0.15, 0.55, 0.56, 0.60]}
+  oculos: {classe: oculos, conf: 0.9, caixa: [0.38, 0.07, 0.72, 0.10]}
+  colete: {classe: colete, conf: 0.9, caixa: [0.15, 0.17, 0.96, 0.52]}
+  luva_ombro: {classe: luvas, conf: 0.9, caixa: [0.11, 0.23, 0.49, 0.30]}
+  luva_quadril: {classe: luvas, conf: 0.9, caixa: [0.26, 0.53, 0.52, 0.62]}
+  pe_tras: {classe: calcado, conf: 0.9, caixa: [0.46, 0.87, 0.64, 0.92]}
+  pe_frente: {classe: calcado, conf: 0.9, caixa: [0.26, 0.93, 0.57, 1.00]}
+
+faixas:
+  - {quadros: 20, pessoa: false}
+  # 1: entra pela borda esquerda ainda sem itens; o portão impede o bloqueio.
+  - {quadros: 20, deslocamento: [-310, -226]}
+  - quadros: 40
+    itens: [capacete, oculos, colete, luva_ombro, luva_quadril, pe_tras, pe_frente]
+  - {quadros: 25, pessoa: false}
+  # 2: sem capacete.
+  - quadros: 40
+    itens: [oculos, colete, luva_ombro, luva_quadril, pe_tras, pe_frente]
+  - {quadros: 25, pessoa: false}
+  # 3: capacete entre conf_min e conf_ok até a pessoa sair.
+  - quadros: 40
+    itens: [capacete_fraco, oculos, colete, luva_ombro, luva_quadril, pe_tras, pe_frente]
+  - {quadros: 25, pessoa: false}
+  # 4: capacete na mão, junto ao quadril.
+  - quadros: 40
+    itens: [capacete_na_mao, oculos, colete, luva_ombro, luva_quadril, pe_tras, pe_frente]
+  - {quadros: 25, pessoa: false}

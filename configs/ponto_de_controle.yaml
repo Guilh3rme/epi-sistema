@@ -1,0 +1,61 @@
+# Ponto de controle (Fase 5). Caminhos relativos à raiz do repositório.
+# Todos os valores são PROVISÓRIOS e serão congelados na Fase 6.
+
+video: data/fumaca/fumaca.mp4  # vídeo de fumaça, gravado pelo autor
+mostrar: false                 # exibe caixas, regiões e registradores, sem gravar; q encerra
+dispositivo: null              # null: escolha do Ultralytics; ou 0, cpu
+
+# Regra da área.
+exigidos: [capacete, oculos, luvas, calcado, colete]
+associacao_ativa: B            # só esta vai ao CLP; A e B rodam sempre
+
+modelos:
+  detector: runs/pesos/yolo26n.pt  # pré-treinado em COCO: só detecta pessoa
+  pose: runs/pesos/yolo26n-pose.pt
+  roteiro: null                    # YAML que define os EPIs; ver roteiro_demo.yaml
+
+# Nome da classe no modelo -> classe do projeto (COCO, SH17 e Construction-PPE).
+classes:
+  person: pessoa
+  Person: pessoa
+  helmet: capacete
+  glasses: oculos
+  goggles: oculos
+  gloves: luvas
+  shoes: calcado
+  boots: calcado
+  safety-vest: colete
+  vest: colete
+
+parametros:
+  # Detecção e visibilidade.
+  conf_min: 0.25
+  conf_ok: 0.5
+  conf_ponto: 0.5
+  iou_pose: 0.5          # mínimo entre a caixa da pessoa e a da pose
+  iou_duplicata: 0.5     # acima disso, duas caixas da mesma classe são o mesmo objeto
+  # Passagem e votação.
+  n: 15
+  maioria: 0.6
+  k_entrada: 3
+  k_saida: 15
+  max_quadros: 150
+  # Portão de entrada: frações do quadro.
+  margem_borda: 0.01
+  altura_min: 0.5
+  # Regiões de B. Cabeça: frações da largura dos ombros.
+  capacete_largura: 1.0
+  capacete_altura: 0.8   # acima da linha dos olhos ou orelhas
+  oculos_margem: 0.25    # para os lados dos olhos visíveis
+  oculos_meia_altura: 0.15
+  # Tronco: margem em fração do retângulo de ombros a quadris, em cada lado.
+  colete_margem: 0.15
+  # Mãos: frações do antebraço (cotovelo ao punho).
+  luva_avanco: 0.4       # do punho ao centro do quadrado, na direção do antebraço
+  luva_lado: 0.9
+  # Pés: lado do quadrado, do tornozelo para baixo, em fração da canela.
+  calcado_lado: 0.7
+
+clp:
+  porta: 5020            # o endereço é sempre 127.0.0.1
+eventos: runs/eventos

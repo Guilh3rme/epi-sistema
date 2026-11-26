@@ -73,7 +73,7 @@ Um ponto é visível se sua confiança alcança `conf_ponto` e ele está dentro 
   câmera (vídeo não abre ou leitura interrompida) → `INDETERMINADO`.
 - A regra da área é a lista de EPIs exigidos, em configuração.
 
-**Simulador de CLP:** servidor Modbus TCP em processo separado, com
+**Simulador de CLP** (forma final registrada na Parte 2)**:** servidor Modbus TCP em processo separado, com
 [`pymodbus` 3.16.2](https://pypi.org/pypi/pymodbus/json) (Python ≥ 3.10, classificador 3.13),
 não instalado. Na API atual, o
 [exemplo oficial de servidor](https://github.com/pymodbus-dev/pymodbus/blob/v3.16.2/examples/server_async.py)
@@ -193,18 +193,42 @@ registra tempo até a decisão, latência até o CLP e FPS.
 - **Encerrada em:** dd/mm/aaaa
 
 ### O que foi feito
+Fase **em andamento**. Módulos `associacao`, `decisao`, `deteccao`, `clp` e `fluxo`, testes,
+configuração, roteiro de demonstração e notebook `05`, até o nível 2 (pose real e detector
+roteirizado).
 
 ### O que mudou em relação ao detalhamento (e por quê)
+- **Segurança, após revisão:** só libera em um quadro aprovado pelo portão e com uma única
+  pessoa; um `LIBERADO` ativo é zerado quando aparece uma segunda pessoa.
+- **Segurança, após revisão:** caixas da mesma classe com IoU acima de `iou_duplicata`
+  (0,5, provisório) contam como um só objeto, para uma detecção repetida não formar um par.
+- Servidor criado com `ModbusTcpServer`, `SimDevice` e `SimData` (pymodbus 3.16.2).
+- YAML lido com o leitor do Ultralytics, que não aceita âncoras; PyYAML não está instalado.
+- Óculos também exigem os ombros, usados como escala. Associação ativa provisória: B.
+- Falha fora de uma passagem gera `INDETERMINADO` com passagem 0.
 
 ### Decisões tomadas
 | Decisão | Motivo | Permanente? (copiar para o plano) |
 |---|---|---|
+| Liberar só com uma pessoa e dentro do portão; zerar com segunda pessoa | falha nunca libera | sim |
+| Caixas duplicadas contam como um objeto | evitar par falso | sim |
 
 ### Resultados
+Nível 2, RTX 4060 Ti, provisórios, antes das duas correções de segurança: 35,3 quadros/s no
+laço e 27,8 com pessoa (vídeo a 30, logo o tempo até a decisão ainda não vale); A 17,1 ms e
+B 35,5 ms por quadro; latência local até o CLP com mediana de 0,43 ms. Depois das correções,
+75 testes passam e o notebook executa.
 
 ### Pendências
+- O autor gravar o vídeo de fumaça (`data/fumaca/fumaca.mp4`) e conferir regiões e
+  registradores com `mostrar: true`.
+- Nível 3: integrar um modelo da F3 e medir novamente.
 
 ### O que a próxima fase precisa saber
+- Limitações: o `LIBERADO` fica retido enquanto a passagem estiver aberta; processo morto
+  retém o último valor no CLP; regiões de B encolhem com a pessoa de lado; calçado começa no
+  tornozelo (bota alta pode aparecer como ausente); a leitura interrompida depende da
+  contagem de quadros do vídeo.
 
 ### Atualizações feitas
 - [ ] Status no plano
