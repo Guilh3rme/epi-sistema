@@ -1,0 +1,64 @@
+# Fase 2: preparação das bases. Fontes em docs/fases/fase-2.md, conferidas em 25/11/2026.
+semente: 0
+fracao_desenvolvimento: 0.15
+
+copia:
+  lado_maior: 1280
+  qualidade_jpeg: 95
+
+# Distância de Hamming entre pHashes de 64 bits. O limiar final é aprovado pelo autor no notebook.
+phash:
+  duplicata_ate: 4
+  revisao_ate: 10
+
+espaco_livre_gb: 25  # exigido no Colab antes de baixar o SH17
+
+sh17:
+  url: https://www.kaggle.com/api/v1/datasets/download/mugheesahmad/sh17-dataset-for-ppe-detection
+  md5_zip: 2e9eb8708de4d1ca84246ed230ca66f8
+  sha256_listas:
+    train_files.txt: 6599473388c5b2ca68e909a9ab557a36bd829ab562f4852486caacc7ed3aaad9
+    val_files.txt: b8c7936d6842e8db04423aeb10426240dddb00c28efb90a084c3eae3d0ce6121
+  imagens:
+    train: 6479
+    val: 1620
+  caixas_artigo:  # por id do projeto, a recontar
+    0: 13802
+    1: 927
+    2: 1945
+    3: 2790
+    4: 4560
+    5: 530
+  mapa:  # id nativo (sh17.yaml): id do projeto
+    0: 0    # person
+    10: 1   # helmet
+    8: 2    # glasses
+    9: 3    # gloves
+    14: 4   # shoes
+    16: 5   # safety-vest
+
+cppe:
+  url: https://github.com/ultralytics/assets/releases/download/v0.0.0/construction-ppe.zip
+  sha256_zip: e5817aa9c73f33e525d76ca6bc6af4e4eac9dcea9bcfef1cfd1a71c09fbc1232
+  imagens:
+    train: 800
+    val: 200
+  caixas_manifesto:
+    train: 11902
+    val: 2961
+  mapa:  # id nativo (construction-ppe.yaml): id do projeto; forklift (10) é descartado
+    5: 0    # Person
+    0: 1    # helmet
+    4: 2    # goggles
+    1: 3    # gloves
+    3: 4    # boots
+    2: 5    # vest
+    6: 6    # no_helmet
+    7: 7    # no_goggle
+    8: 8    # no_gloves
+    9: 9    # no_boots
+    11: 10  # no_vest
+  familias:  # prefixos de nome de arquivo
+    - ultralytics-ppe-nov2026-
+    - source-
+  amostra_por_familia: 50

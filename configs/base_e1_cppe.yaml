@@ -1,0 +1,13 @@
+# E1: teste entre bases na Construction-PPE completa, vista com os ids 0-5.
+# As listas são geradas em data/preparado/ por notebooks/01_dados.ipynb.
+path: preparado  # relativo a data/ (ver configurar_ultralytics)
+train: e1_treino.txt
+val: e1_desenvolvimento.txt
+test: e1_teste_cruzado.txt
+names:
+  0: pessoa
+  1: capacete
+  2: oculos
+  3: luvas
+  4: calcado
+  5: colete

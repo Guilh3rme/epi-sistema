@@ -167,19 +167,42 @@ e divergência interrompe a fase; as contagens após as remoções são registra
 
 ## Parte 2 — Encerramento
 - **Encerrada em:** —
+
 ### O que foi feito
-Nada.
+Fase **em andamento**. Módulo `dados`, testes, configurações e notebook `01`, verificados
+localmente em modo curto (Construction-PPE e amostra do SH17).
+
 ### O que mudou em relação ao detalhamento (e por quê)
-Nada.
+- JPEG grande é decodificado já reduzido (mais rápido; diferença média de 0,7 nível de pixel).
+- A Construction-PPE é lida direto do zip, com validação dos nomes.
+- O pacote vai para o Drive logo após a preparação, antes das conferências, para não perder
+  trabalho.
+- O plano B com `kagglehub` não foi implementado.
+- YAML lido com o leitor do Ultralytics; PyYAML não é dependência. `numpy>=2` é exigido.
+- A preparação também para se uma dimensão divergir do VOC ou um rótulo sair de [0, 1].
+
 ### Decisões tomadas
 | Decisão | Motivo | Permanente? (copiar para o plano) |
 |---|---|---|
+
 ### Resultados
-Nada.
+Execução local em modo curto: zip da Construction-PPE e as duas listas do SH17 conferidos por
+SHA-256; 6.479 e 1.620 nomes (SH17), 800 e 200 imagens (Construction-PPE); caixas iguais ao
+manifesto (11.902 e 2.961); famílias de nomes 707 e 293; 56 imagens do SH17 sem divergência
+com o VOC; as quatro vistas de teste lidas por `model.val`.
+
+Achado: há um par treino x `val` da Construction-PPE (distância 6) com o mesmo cenário e
+pessoas diferentes, indício de cenas geradas reaproveitadas, que o pHash detecta mal. É uma
+limitação a declarar.
+
 ### Pendências
-Nada.
+- Executar `01_dados.ipynb` no Colab, revisar os pares de distância 5 a 10 e aprovar o limiar.
+- Trazer as divisões congeladas para `configs/divisoes/`.
+- Só o Colab confirma: acesso anônimo ao Kaggle, MD5 do zip, disco, contagem completa do SH17
+  e escrita no Drive.
+
 ### O que a próxima fase precisa saber
-Nada.
+Nada ainda: depende das divisões congeladas.
 ### Atualizações feitas
 - [ ] Status no plano
 - [ ] Decisões acumuladas no plano

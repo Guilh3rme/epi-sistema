@@ -1,1 +1,9 @@
-# Parâmetros em YAML, criados a partir da Fase 2.
+# Configurações
+
+| Arquivo | Uso |
+|---|---|
+| `dados.yaml` | preparação das bases (fontes, impressões digitais, limiares) |
+| `base_*.yaml` | vistas das bases para E1, E2 e testes entre bases |
+| `divisoes/` | listas congeladas, geradas pela preparação no Colab |
+| `ponto_de_controle.yaml` | fluxo do ponto de controle (valores provisórios) |
+| `roteiro_*.yaml` | detector roteirizado para demonstrar o fluxo sem modelo de EPI |

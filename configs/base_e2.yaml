@@ -1,0 +1,18 @@
+# E2: treino na Construction-PPE, teste interno no val dela (11 classes).
+# As listas são geradas em data/preparado/ por notebooks/01_dados.ipynb.
+path: preparado  # relativo a data/ (ver configurar_ultralytics)
+train: e2_treino.txt
+val: e2_desenvolvimento.txt
+test: e2_teste.txt
+names:
+  0: pessoa
+  1: capacete
+  2: oculos
+  3: luvas
+  4: calcado
+  5: colete
+  6: no_helmet
+  7: no_goggle
+  8: no_gloves
+  9: no_boots
+  10: no_vest

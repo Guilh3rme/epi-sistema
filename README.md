@@ -38,6 +38,12 @@ pytest
 jupyter nbconvert --to notebook --execute notebooks/00_ambiente.ipynb --output-dir runs/executados
 ```
 
+## Preparação das bases (em desenvolvimento)
+
+Abra `notebooks/01_dados.ipynb` no Google Colab (sem GPU; deixe ao menos 4 GB livres no
+Drive) e execute tudo. A execução para de propósito para a revisão dos pares de imagens
+parecidas; siga as instruções do notebook. Parâmetros em `configs/dados.yaml`.
+
 ## Ponto de controle (em desenvolvimento)
 
 ```powershell
