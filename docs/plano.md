@@ -30,7 +30,7 @@ A prioridade é o sistema (F1 a F6). Documentos e artigo vêm depois dele.
 | Fase | Nome | Depende de | Status |
 |---|---|---|---|
 | F0 | Documento do projeto | sistema | depois do sistema |
-| F1 | Repositório e ambiente | metodologia v1.1 | falta a execução no Colab |
+| F1 | Repositório e ambiente | metodologia v1.1 | concluída |
 | F2 | Preparação das bases | F1 | não iniciada |
 | F3 | Treino E1 e E2 | F2 | não iniciada |
 | F4 | Avaliação e teste entre bases | F3 | não iniciada |
@@ -150,3 +150,5 @@ Mínimo viável: F1 a F7.
 | 25/11/2026 | F6 | Associações A e B congeladas na calibração e avaliadas no mesmo teste único | Metodologia v1.1 |
 | 25/11/2026 | F6 | Vídeos brutos de pesquisa ficam locais e fora do git; "sem armazenar imagens" vale para o sistema em operação | Metodologia v1.1 |
 | 25/11/2026 | F1 | Repositório público no GitHub, código sob AGPL-3.0 | Escolha do autor; licença do Ultralytics |
+| 25/11/2026 | F1 | Ultralytics 8.4.219; PyTorch do Colab não é substituído | Reprodutibilidade sem conflito de CUDA |
+| 25/11/2026 | F1 | Configuração, bases e resultados do Ultralytics dentro do projeto (`configurar_ultralytics()`) | Evitar arquivos fora do repositório |

@@ -83,11 +83,11 @@ A fase só encerra depois da execução no Colab.
 
 ## Parte 2 — Encerramento
 
-- **Encerrada em:**
+- **Encerrada em:** 25/11/2026
 
 ### O que foi feito
-Estrutura do repositório, pacote `epi`, notebook `00_ambiente`, testes, licença e
-publicação no GitHub. Falta a execução no Colab para encerrar a fase.
+Estrutura do repositório, pacote `epi`, notebook `00_ambiente`, testes, licença,
+publicação no GitHub e execução no computador local e no Google Colab.
 
 ### O que mudou em relação ao detalhamento (e por quê)
 - Repositório público: o Colab clona sem token do GitHub.
@@ -98,20 +98,26 @@ publicação no GitHub. Falta a execução no Colab para encerrar a fase.
 ### Decisões tomadas
 | Decisão | Motivo | Permanente? (copiar para o plano) |
 |---|---|---|
+| Ultralytics fixado em 8.4.219; PyTorch do Colab não é substituído | reprodutibilidade sem conflito de CUDA | sim |
+| Configuração, bases e resultados do Ultralytics dentro do projeto | evitar arquivos fora do repositório | sim |
 
 ### Resultados
 Execução local em 25/11/2026: Python 3.13.18, PyTorch 2.14.1+cu130, torchvision 0.29.1,
 Ultralytics 8.4.219, RTX 4060 Ti. Dois testes passam; o notebook `00` executa do início ao
 fim, também a partir de um clone limpo do repositório (usando o ambiente local).
 
+Execução no Google Colab pelo autor, concluída com `ambiente OK`: GPU Tesla T4, Linux,
+Python 3.13.16, PyTorch 2.14.1+cu130 (CUDA 13.0), Ultralytics 8.4.219, semente 0, commit
+`780e0dc`, código sem modificações.
+
 ### Pendências
-- Executar `00_ambiente.ipynb` no Google Colab com GPU e registrar a saída.
+Nada.
 
 ### O que a próxima fase precisa saber
 - Chamar `configurar_ultralytics()` antes de importar `ultralytics`; bases ficam em `data/`.
 - Os notebooks são gravados sem saídas (`nbstripout`).
 
 ### Atualizações feitas
-- [ ] Status no plano
-- [ ] Decisões acumuladas no plano
-- [ ] Metodologia (somente se houve mudança aprovada de método)
+- [x] Status no plano
+- [x] Decisões acumuladas no plano
+- [ ] Metodologia (não houve mudança de método)
