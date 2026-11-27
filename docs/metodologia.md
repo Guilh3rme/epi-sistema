@@ -1,8 +1,9 @@
-# Metodologia do projeto (v1.3)
+# Metodologia do projeto (v1.4)
 
 **Aprovada pelo aluno em 25/11/2026.** v1.1: as duas associações entram no mesmo teste e os
 vídeos de pesquisa ficam locais. v1.2: luvas e calçado exigem os dois lados. v1.3
 (26/11/2026): liberação só com uma única pessoa e detecções repetidas contadas uma vez.
+v1.4 (27/11/2026): por tamanho de objeto são reportados somente revocação e AP.
 A definir com o orientador: dispensa do Comitê de Ética nas gravações só com o autor e metas
 de liberação indevida e de indeterminados.
 
@@ -193,9 +194,12 @@ CEP e TCLE.
 
 | Nível | Métricas |
 |---|---|
-| Detecção | P, R, F1, mAP@0,5 e mAP@0,5:0,95 por classe e por tamanho de objeto |
+| Detecção | P, R, F1, mAP@0,5 e mAP@0,5:0,95 por classe; R e AP por tamanho de objeto |
 | Decisão | tabela abaixo, taxa de liberação indevida, taxa de negação a conformes, taxa de indeterminados |
 | Sistema | tempo até a decisão, latência até o CLP, FPS, hardware informado |
+
+P, R e F1 usam um limiar de confiança fixado no desenvolvimento. Por tamanho não há P nem
+F1, pois uma detecção sem caixa marcada correspondente não tem faixa definida.
 
 Uma **passagem** começa quando a pessoa entra no campo de visão, recebe uma decisão e
 termina quando ela sai. Quadros de uma mesma tomada não são passagens distintas, e a janela

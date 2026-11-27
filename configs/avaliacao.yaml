@@ -1,0 +1,10 @@
+# Avaliação da Fase 4 (docs/fases/fase-4.md). Imagem, lote e demais argumentos: treino.yaml.
+principais: [pessoa, capacete, colete, luvas]
+exploratorias: [calcado, oculos]
+tolerancia_f3: 0.005  # diferença máxima de mAP para o desenvolvimento da F3
+
+# Confiança para relatar P, R e F1, escolhida no desenvolvimento por notebooks/04 e publicada
+# antes do teste. Não define os limiares do ponto de controle.
+limiares:
+  e1: null
+  e2: null

@@ -1,6 +1,6 @@
-# Plano faseado (v1.3)
+# Plano faseado (v1.4)
 
-Segue a [metodologia v1.3](metodologia.md), que é a fonte de verdade. Este plano é
+Segue a [metodologia v1.4](metodologia.md), que é a fonte de verdade. Este plano é
 **macro**: tarefas, arquivos, parâmetros e entregáveis de cada fase são definidos só quando
 a fase começa, em `docs/fases/fase-N.md` (modelo em [fases/_modelo.md](fases/_modelo.md)).
 
@@ -33,7 +33,7 @@ A prioridade é o sistema (F1 a F6). Documentos e artigo vêm depois dele.
 | F1 | Repositório e ambiente | metodologia v1.1 | concluída |
 | F2 | Preparação das bases | F1 | concluída |
 | F3 | Treino E1 e E2 | F2 | concluída |
-| F4 | Avaliação e teste entre bases | F3 | não iniciada |
+| F4 | Avaliação e teste entre bases | F3 | em desenvolvimento |
 | F5 | Ponto de controle e CLP simulado | F1; modelo de F3 para integrar | em desenvolvimento |
 | F6 | Gravações de calibração e de teste | F4, F5 | não iniciada |
 | F7 | Consolidação dos resultados | F6 | não iniciada |
@@ -163,3 +163,5 @@ Mínimo viável: F1 a F7.
 | 26/11/2026 | F3 | Mesma configuração em E1 e E2: AdamW fixo (`lr0` 0,001), lote 16, 100 épocas, paciência 30, semente 0 | O modo automático daria taxas diferentes a cada experimento |
 | 26/11/2026 | F3 | Envio de estatísticas de uso do Ultralytics desligado | Privacidade; aprovado pelo autor |
 | 27/11/2026 | F3 | E1 e E2 treinados no Colab (Tesla T4); comparações e sementes da F8 usam o mesmo tipo de GPU | Condições iguais; escolha do autor |
+| 27/11/2026 | F4 | Limiar de confiança de cada experimento fixado no desenvolvimento e publicado antes do teste | Não escolher limiar no teste |
+| 27/11/2026 | F4 | Por tamanho: faixas por área relativa (lado maior em 640), só R e AP (metodologia v1.4) | Falso positivo não tem faixa; aprovada pelo autor |

@@ -6,5 +6,6 @@
 | `base_*.yaml` | vistas das bases para E1, E2 e testes entre bases |
 | `divisoes/` | listas congeladas, geradas pela preparação no Colab |
 | `treino.yaml` | treino de E1 e E2 (mesma configuração) |
+| `avaliacao.yaml` | avaliação por classe e tamanho, e limiares publicados antes do teste |
 | `ponto_de_controle.yaml` | fluxo do ponto de controle (valores provisórios) |
 | `roteiro_*.yaml` | detector roteirizado para demonstrar o fluxo sem modelo de EPI |

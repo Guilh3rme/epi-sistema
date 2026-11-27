@@ -55,6 +55,12 @@ Abra `notebooks/03_treino.ipynb` no Google Colab com GPU e execute tudo. O trein
 para o Drive e retomado se a sessão cair; os conjuntos de teste não são usados. Parâmetros
 em `configs/treino.yaml`. Os registros dos treinos (sem pesos) estão em `experimentos/f3/`.
 
+## Avaliação (em desenvolvimento)
+
+`notebooks/04_avaliacao.ipynb`, no Google Colab com GPU T4, reproduz o desenvolvimento,
+fixa os limiares de confiança e, depois de publicados, roda cada teste **uma única vez**.
+Parâmetros em `configs/avaliacao.yaml`; detalhes em [fase-4](docs/fases/fase-4.md).
+
 ## Ponto de controle (em desenvolvimento)
 
 ```powershell

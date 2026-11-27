@@ -79,14 +79,21 @@ def resumir_curva(results: str | Path, epocas: int, close_mosaic: int) -> dict:
     }
 
 
-def _avaliar_desenvolvimento(melhor: Path, yaml: Path, cfg: dict, saida: Path, device) -> dict:
-    """Métricas por classe do `best.pt` no desenvolvimento (`split="val"`)."""
+def validar(peso: Path, yaml: Path, cfg: dict, saida: Path, device, split: str = "val",
+            nome: str = "val_desenvolvimento", lidas: list | None = None, **extra):
+    """`model.val` com os mesmos argumentos no desenvolvimento (F3) e na avaliação (F4)."""
     from ultralytics import YOLO
 
     t = cfg["treino"]
-    m = YOLO(melhor).val(data=str(yaml), split="val", imgsz=t["imgsz"], batch=t["batch"],
-                         device=device, plots=False, verbose=False, project=str(saida),
-                         name="val_desenvolvimento", exist_ok=True)
+    modelo = YOLO(peso)
+    if lidas is not None:  # recebe os caminhos das imagens lidas
+        modelo.add_callback("on_val_end", lambda v: lidas.extend(v.dataloader.dataset.im_files))
+    return modelo.val(data=str(yaml), split=split, imgsz=t["imgsz"], batch=t["batch"],
+                      device=device, plots=False, verbose=False, project=str(saida),
+                      name=nome, exist_ok=True, **extra)
+
+
+def resumir_metricas(m) -> dict:
     caixa = m.box
     por_classe = {
         m.names[int(c)]: {
@@ -175,7 +182,7 @@ def treinar(experimento: str, cfg: dict, preparado, divisoes, saida, copia, peso
         modelo.train(**argumentos)
 
     melhor = pasta / "weights" / "best.pt"
-    metricas = _avaliar_desenvolvimento(melhor, yaml, cfg, saida, device)
+    metricas = resumir_metricas(validar(melhor, yaml, cfg, saida, device))
     copiar(pasta, copia)
     pesos = {}
     for arquivo in ("best.pt", "last.pt"):
