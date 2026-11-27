@@ -1,0 +1,124 @@
+{
+  "experimento": "e2",
+  "nome": "e2_yolo26n_s0",
+  "modelo": "yolo26n",
+  "parametros": {
+    "imgsz": 640,
+    "batch": 16,
+    "optimizer": "AdamW",
+    "lr0": 0.001,
+    "momentum": 0.9,
+    "warmup_bias_lr": 0.0,
+    "epochs": 100,
+    "patience": 30,
+    "close_mosaic": 10,
+    "seed": 0,
+    "deterministic": true,
+    "cache": "disk"
+  },
+  "peso_inicial_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+  "pesos_sha256": {
+    "best.pt": "3699e24794547147570842171f4b2a8f4137085071249ad89d846d77ad949d8b",
+    "last.pt": "1bc5697da33507bc9261afcfaf13debe1127eaf6e6c60a52c09e31465fc8b932"
+  },
+  "relatorio_divisoes_sha256": "32ffe9aec3eec475b1b02b3f0b453c3c10a61cdc4ce0e2e5d879164f0ad4547d",
+  "imagens": {
+    "train": 677,
+    "val": 120
+  },
+  "epocas_executadas": 100,
+  "melhor_epoca": 73,
+  "mosaico_desligado_no_fim": true,
+  "metricas_desenvolvimento": {
+    "geral": {
+      "precisao": 0.8979397975974333,
+      "revocacao": 0.6538460356381389,
+      "map50": 0.7283542824811486,
+      "map50_95": 0.5253140996934317
+    },
+    "por_classe": {
+      "pessoa": {
+        "precisao": 0.9606691342225385,
+        "revocacao": 0.8464052287581699,
+        "map50": 0.91076037720374,
+        "map50_95": 0.7309387495925002
+      },
+      "capacete": {
+        "precisao": 0.9268645755704992,
+        "revocacao": 0.6927083333333334,
+        "map50": 0.7597936297669569,
+        "map50_95": 0.5828188503471454
+      },
+      "oculos": {
+        "precisao": 0.9609881925866373,
+        "revocacao": 0.963855421686747,
+        "map50": 0.9807587725732569,
+        "map50_95": 0.6702020754692358
+      },
+      "luvas": {
+        "precisao": 0.9651033633459916,
+        "revocacao": 0.7067307692307693,
+        "map50": 0.8115185002357629,
+        "map50_95": 0.6257266396780483
+      },
+      "calcado": {
+        "precisao": 0.9004917108234107,
+        "revocacao": 0.6654676258992805,
+        "map50": 0.7486126274911268,
+        "map50_95": 0.5577586329425964
+      },
+      "colete": {
+        "precisao": 0.9495940346374656,
+        "revocacao": 0.7359307359307359,
+        "map50": 0.8028136235127243,
+        "map50_95": 0.6189317844428911
+      },
+      "no_helmet": {
+        "precisao": 0.8795233268987853,
+        "revocacao": 0.44660194174757284,
+        "map50": 0.5503841048362493,
+        "map50_95": 0.33707057418220204
+      },
+      "no_goggle": {
+        "precisao": 0.6981761221918027,
+        "revocacao": 0.22602472096895176,
+        "map50": 0.3424536200573546,
+        "map50_95": 0.10328053570382574
+      },
+      "no_gloves": {
+        "precisao": 0.931300065884839,
+        "revocacao": 0.5882352941176471,
+        "map50": 0.6547276241639914,
+        "map50_95": 0.47202157797009336
+      },
+      "no_boots": {
+        "precisao": 0.8255027723245799,
+        "revocacao": 0.7142857142857143,
+        "map50": 0.7659748269812913,
+        "map50_95": 0.5953170293230319
+      },
+      "no_vest": {
+        "precisao": 0.8791244750852165,
+        "revocacao": 0.6060606060606061,
+        "map50": 0.6840994004701805,
+        "map50_95": 0.4843886469761779
+      }
+    }
+  },
+  "sessoes": [
+    {
+      "data_utc": "2026-11-27T00:24:34+00:00",
+      "colab": true,
+      "sistema": "Linux-6.6.159+-x86_64-with-glibc2.39",
+      "python": "3.13.16",
+      "torch": "2.14.1+cu130",
+      "ultralytics": "8.4.219",
+      "cuda": "13.0",
+      "cuda_disponivel": true,
+      "gpu": "Tesla T4",
+      "semente": 0,
+      "commit": "148e05a4f27327208439e185c9c94f1cd77453a7",
+      "codigo_modificado": false
+    }
+  ]
+}

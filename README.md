@@ -3,7 +3,8 @@
 Verificação de conformidade de EPI em ponto de controle de acesso, com visão computacional
 e integração à automação. Projeto de mestrado (PECS/UEMA).
 
-**Estado:** bases preparadas e divisões congeladas. Ainda não há modelos treinados.
+**Estado:** modelos E1 e E2 treinados (pesos fora do git). A avaliação nos conjuntos de
+teste ainda não foi feita.
 
 - [Metodologia](docs/metodologia.md)
 - [Plano por fases](docs/plano.md)
@@ -15,6 +16,7 @@ e integração à automação. Projeto de mestrado (PECS/UEMA).
 | `notebooks/` | notebooks numerados, que apenas orquestram |
 | `src/epi/` | código reutilizável |
 | `configs/` | parâmetros |
+| `experimentos/` | registros e curvas dos treinos |
 | `tests/` | testes |
 | `docs/` | metodologia, plano e registros de fase |
 | `data/`, `runs/` | bases e resultados, **fora do git** |
@@ -47,11 +49,11 @@ parecidas; siga as instruções do notebook. Parâmetros em `configs/dados.yaml`
 As divisões congeladas estão em `configs/divisoes/`: nomes de arquivos, dimensões,
 impressões digitais e contagens, sem imagens.
 
-## Treino (em desenvolvimento)
+## Treino
 
 Abra `notebooks/03_treino.ipynb` no Google Colab com GPU e execute tudo. O treino é copiado
 para o Drive e retomado se a sessão cair; os conjuntos de teste não são usados. Parâmetros
-em `configs/treino.yaml`.
+em `configs/treino.yaml`. Os registros dos treinos (sem pesos) estão em `experimentos/f3/`.
 
 ## Ponto de controle (em desenvolvimento)
 

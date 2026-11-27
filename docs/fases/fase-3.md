@@ -117,37 +117,91 @@ anteriores provavelmente enviaram esses dados. **(decisão)** Desligar em
 
 ## Parte 2 — Encerramento
 
-- **Encerrada em:** —
+- **Encerrada em:** 27/11/2026
 
 ### O que foi feito
-Fase **em andamento**. Envio de estatísticas desligado, `treino.yaml`, módulo `treino`,
-testes e notebook `03`, verificados no computador local (RTX 4060 Ti): interrupção no
-início da época 2, retomada a partir da cópia em outra pasta, experimento concluído pulado,
-registro refeito sem treinar e notebook completo em modo curto. Os números dessas execuções
-não são resultados. `pytest`: 100 testes passam.
+Envio de estatísticas desligado, `treino.yaml`, módulo `treino`, testes e notebook `03`,
+verificados no computador local (RTX 4060 Ti): interrupção no início da época 2, retomada a
+partir da cópia em outra pasta, experimento concluído pulado, registro refeito sem treinar e
+notebook completo em modo curto (números sem valor de resultado). `pytest`: 100 testes passam.
+
+E2 e E1 treinados no Colab (Tesla T4, commit `148e05a`, sem código modificado), uma sessão
+cada, sem retomada. Pesos e registros baixados; o SHA-256 dos dois `best.pt` confere com o
+registrado no treino, os dois carregam localmente com as classes esperadas e a impressão do
+relatório das divisões é a das divisões congeladas. Nenhum conjunto de teste foi usado.
 
 ### O que mudou em relação ao detalhamento (e por quê)
 - O YAML do treino é gerado a partir de `base_<exp>.yaml` **sem a chave `test`**.
 - Um treino caído depois da última época é tratado como encerrado (não há o que retomar).
 - A troca de GPU é recusada na retomada; um recomeço do zero é permitido.
 - O notebook para antes do E1 até a confirmação (`CONFIRMADO_E1`).
+- Os registros ficam em `experimentos/f3/<exp>_yolo26n_s0/` (nome da execução, e não só
+  `<exp>`), para caber outros modelos e sementes.
 
 ### Decisões tomadas
 | Decisão | Motivo | Permanente? (copiar para o plano) |
 |---|---|---|
+| E1 e E2 treinados no Colab, em Tesla T4 (escolha do autor, após ver o tempo do E2) | cerca de 2,2 min por época no E1; o plano B local não foi necessário | sim: comparações e sementes da F8 usam o mesmo tipo de GPU |
 
 ### Resultados
-nada
+| | E1 (SH17) | E2 (Construction-PPE) |
+|---|---|---|
+| imagens de treino / desenvolvimento | 5.453 / 962 | 677 / 120 |
+| épocas executadas | 100 | 100 |
+| melhor época | 78 | 73 |
+| tempo de treino (aprox.) | 3,7 h | 20 min |
+
+A parada antecipada não atuou: o limite de 100 épocas chegou antes de 30 épocas sem melhora.
+A fase final sem *mosaic* (épocas 91 a 100) ocorreu nos dois, mas o melhor peso é anterior a
+ela em ambos.
+
+**Métricas no desenvolvimento** (`best.pt`). Não são resultado de teste, não comparam E1 com
+E2 (conjuntos diferentes; a linha geral de E2 inclui as classes `no_*`) e não escolhem o
+modelo do sistema.
+
+| Classe | E1 P | E1 R | E1 mAP50 | E1 mAP50-95 | E2 P | E2 R | E2 mAP50 | E2 mAP50-95 |
+|---|---|---|---|---|---|---|---|---|
+| geral | 0,773 | 0,568 | 0,628 | 0,413 | 0,898 | 0,654 | 0,728 | 0,525 |
+| pessoa | 0,908 | 0,876 | 0,917 | 0,737 | 0,961 | 0,846 | 0,911 | 0,731 |
+| capacete | 0,763 | 0,635 | 0,722 | 0,499 | 0,927 | 0,693 | 0,760 | 0,583 |
+| oculos | 0,818 | 0,570 | 0,628 | 0,343 | 0,961 | 0,964 | 0,981 | 0,670 |
+| luvas | 0,702 | 0,413 | 0,485 | 0,285 | 0,965 | 0,707 | 0,812 | 0,626 |
+| calcado | 0,769 | 0,499 | 0,578 | 0,318 | 0,900 | 0,665 | 0,749 | 0,558 |
+| colete | 0,675 | 0,417 | 0,441 | 0,296 | 0,950 | 0,736 | 0,803 | 0,619 |
+| no_helmet | — | — | — | — | 0,880 | 0,447 | 0,550 | 0,337 |
+| no_goggle | — | — | — | — | 0,698 | 0,226 | 0,342 | 0,103 |
+| no_gloves | — | — | — | — | 0,931 | 0,588 | 0,655 | 0,472 |
+| no_boots | — | — | — | — | 0,826 | 0,714 | 0,766 | 0,595 |
+| no_vest | — | — | — | — | 0,879 | 0,606 | 0,684 | 0,484 |
+
+| Exp. | Peso (cópia local, fora do git) | SHA-256 do `best.pt` |
+|---|---|---|
+| E1 | `runs/pesos/e1_yolo26n_s0.pt` | `be63f8282c23856dd99c015998262b055f41462410fdae164a68820ad94203e4` |
+| E2 | `runs/pesos/e2_yolo26n_s0.pt` | `3699e24794547147570842171f4b2a8f4137085071249ad89d846d77ad949d8b` |
+
+Registros completos: [E1](../../experimentos/f3/e1_yolo26n_s0/resumo.json) e
+[E2](../../experimentos/f3/e2_yolo26n_s0/resumo.json), com a curva em `results.csv`.
+
+### Limitações
+- No desenvolvimento de E1, `colete` e `luvas` têm as menores métricas; no de E2, as classes
+  de ausência `no_goggle` e `no_helmet`.
+- O desenvolvimento de E2 tem só 120 imagens e a base tem forte indício de imagens geradas;
+  o de E1 sai do treino do SH17, com fotógrafos em comum. As métricas podem ser otimistas.
+- Uma semente por experimento.
 
 ### Pendências
-nada
+- Pergunta aberta ao autor: incluir na metodologia a limitação dos fotógrafos em comum no
+  SH17 (registrada na F2).
 
 ### O que a próxima fase precisa saber
+- Pesos: `runs/pesos/` no computador local e `MyDrive/epi-sistema/f3/` no Drive; o pacote das
+  bases continua em `MyDrive/epi-sistema/f2/` (manter os dois).
+- Os testes ainda não foram usados; a F4 os executa uma única vez.
 - Para a F5 (nível 3): o modelo treinado usa os nomes do projeto (`pessoa`, `capacete`...),
   mas o mapa `classes` de `configs/ponto_de_controle.yaml` só traduz nomes em inglês, e
   `detectar()` descarta o que não está no mapa. Incluir esses nomes antes de integrar.
 
 ### Atualizações feitas
-- [ ] Status no plano
-- [ ] Decisões acumuladas no plano
+- [x] Status no plano
+- [x] Decisões acumuladas no plano
 - [ ] Metodologia (somente se houve mudança aprovada de método)

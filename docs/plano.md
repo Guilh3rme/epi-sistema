@@ -32,7 +32,7 @@ A prioridade é o sistema (F1 a F6). Documentos e artigo vêm depois dele.
 | F0 | Documento do projeto | sistema | depois do sistema |
 | F1 | Repositório e ambiente | metodologia v1.1 | concluída |
 | F2 | Preparação das bases | F1 | concluída |
-| F3 | Treino E1 e E2 | F2 | em desenvolvimento |
+| F3 | Treino E1 e E2 | F2 | concluída |
 | F4 | Avaliação e teste entre bases | F3 | não iniciada |
 | F5 | Ponto de controle e CLP simulado | F1; modelo de F3 para integrar | em desenvolvimento |
 | F6 | Gravações de calibração e de teste | F4, F5 | não iniciada |
@@ -162,3 +162,4 @@ Mínimo viável: F1 a F7.
 | 26/11/2026 | F2 | Divisões congeladas em `configs/divisoes/`; não regenerar | Base comum de treino e avaliação |
 | 26/11/2026 | F3 | Mesma configuração em E1 e E2: AdamW fixo (`lr0` 0,001), lote 16, 100 épocas, paciência 30, semente 0 | O modo automático daria taxas diferentes a cada experimento |
 | 26/11/2026 | F3 | Envio de estatísticas de uso do Ultralytics desligado | Privacidade; aprovado pelo autor |
+| 27/11/2026 | F3 | E1 e E2 treinados no Colab (Tesla T4); comparações e sementes da F8 usam o mesmo tipo de GPU | Condições iguais; escolha do autor |
