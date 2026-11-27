@@ -47,6 +47,12 @@ parecidas; siga as instruções do notebook. Parâmetros em `configs/dados.yaml`
 As divisões congeladas estão em `configs/divisoes/`: nomes de arquivos, dimensões,
 impressões digitais e contagens, sem imagens.
 
+## Treino (em desenvolvimento)
+
+Abra `notebooks/03_treino.ipynb` no Google Colab com GPU e execute tudo. O treino é copiado
+para o Drive e retomado se a sessão cair; os conjuntos de teste não são usados. Parâmetros
+em `configs/treino.yaml`.
+
 ## Ponto de controle (em desenvolvimento)
 
 ```powershell

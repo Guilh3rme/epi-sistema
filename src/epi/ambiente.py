@@ -21,6 +21,8 @@ def em_colab() -> bool:
 def configurar_ultralytics(raiz: Path = RAIZ) -> None:
     """Mantém configuração, bases e resultados do Ultralytics dentro do projeto.
 
+    Desliga também o envio de estatísticas de uso (`sync`), ligado por padrão.
+
     Chamar antes de importar `ultralytics`, que lê esses caminhos na importação.
     """
     config = raiz / "runs" / ".ultralytics"
@@ -31,7 +33,8 @@ def configurar_ultralytics(raiz: Path = RAIZ) -> None:
     # Em outro processo, para que a próxima importação neste já leia os caminhos novos.
     codigo = (
         "import sys; from ultralytics import settings; settings.update("
-        "{'datasets_dir': sys.argv[1], 'runs_dir': sys.argv[2], 'weights_dir': sys.argv[3]})"
+        "{'datasets_dir': sys.argv[1], 'runs_dir': sys.argv[2], 'weights_dir': sys.argv[3], "
+        "'sync': False})"
     )
     caminhos = [raiz / "data", raiz / "runs", raiz / "runs" / "pesos"]
     subprocess.run([sys.executable, "-c", codigo, *map(str, caminhos)], check=True)

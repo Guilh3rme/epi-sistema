@@ -32,7 +32,7 @@ A prioridade é o sistema (F1 a F6). Documentos e artigo vêm depois dele.
 | F0 | Documento do projeto | sistema | depois do sistema |
 | F1 | Repositório e ambiente | metodologia v1.1 | concluída |
 | F2 | Preparação das bases | F1 | concluída |
-| F3 | Treino E1 e E2 | F2 | não iniciada |
+| F3 | Treino E1 e E2 | F2 | em desenvolvimento |
 | F4 | Avaliação e teste entre bases | F3 | não iniciada |
 | F5 | Ponto de controle e CLP simulado | F1; modelo de F3 para integrar | em desenvolvimento |
 | F6 | Gravações de calibração e de teste | F4, F5 | não iniciada |
@@ -160,3 +160,5 @@ Mínimo viável: F1 a F7.
 | 26/11/2026 | F5 | Caixas repetidas da mesma classe contam como um objeto (metodologia v1.3) | Evitar par falso; aprovada pelo autor |
 | 26/11/2026 | F2 | Duplicatas: revisão visual até distância 10; distância 12 é duplicata sem revisão | Há duplicatas além de 10; aprovada pelo autor |
 | 26/11/2026 | F2 | Divisões congeladas em `configs/divisoes/`; não regenerar | Base comum de treino e avaliação |
+| 26/11/2026 | F3 | Mesma configuração em E1 e E2: AdamW fixo (`lr0` 0,001), lote 16, 100 épocas, paciência 30, semente 0 | O modo automático daria taxas diferentes a cada experimento |
+| 26/11/2026 | F3 | Envio de estatísticas de uso do Ultralytics desligado | Privacidade; aprovado pelo autor |

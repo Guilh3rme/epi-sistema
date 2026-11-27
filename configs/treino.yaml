@@ -1,0 +1,22 @@
+# Treino da Fase 3: a mesma configuração para E1 e E2 (docs/fases/fase-3.md).
+modelo: yolo26n
+peso:
+  url: https://github.com/ultralytics/assets/releases/download/v8.4.0/yolo26n.pt
+  sha256: 9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef
+
+# Argumentos de `model.train`. O que não está aqui fica no padrão do Ultralytics 8.4.219.
+treino:
+  imgsz: 640
+  batch: 16
+  optimizer: AdamW     # fixo: `auto` daria taxas diferentes a E1 e E2
+  lr0: 0.001
+  momentum: 0.9
+  warmup_bias_lr: 0.0
+  epochs: 100
+  patience: 30
+  close_mosaic: 10
+  seed: 0
+  deterministic: true
+  cache: disk          # o cache em memória não é determinístico
+
+copiar_a_cada: 5       # épocas entre cópias para o Drive
