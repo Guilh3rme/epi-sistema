@@ -102,7 +102,8 @@ comparável com o AP geral do Ultralytics; as tabelas dizem isso.
 métricas. No desenvolvimento do E2 repetido no computador local (RTX 4060 Ti, cópia das
 imagens preparada localmente), o mAP diferiu no máximo 0,0012 e a precisão de `no_helmet`,
 0,012: P e R são lidos no ponto de F1 máximo, que se desloca com variações mínimas. A
-tolerância passou a valer só para o mAP. Nenhum teste foi lido.
+tolerância passou a valer só para o mAP. Nenhum teste foi lido. Aprovado pelo autor em
+27/11/2026, antes do teste, junto com a limitação dos fotógrafos (metodologia v1.5).
 
 **Onde rodar (decisão):** Colab com Tesla T4, restaurando o pacote do Drive.
 

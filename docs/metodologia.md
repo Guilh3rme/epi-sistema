@@ -1,9 +1,10 @@
-# Metodologia do projeto (v1.4)
+# Metodologia do projeto (v1.5)
 
 **Aprovada pelo aluno em 25/11/2026.** v1.1: as duas associações entram no mesmo teste e os
 vídeos de pesquisa ficam locais. v1.2: luvas e calçado exigem os dois lados. v1.3
 (26/11/2026): liberação só com uma única pessoa e detecções repetidas contadas uma vez.
 v1.4 (27/11/2026): por tamanho de objeto são reportados somente revocação e AP.
+v1.5 (27/11/2026): limitação dos fotógrafos presentes no treino e no teste do SH17.
 A definir com o orientador: dispensa do Comitê de Ética nas gravações só com o autor e metas
 de liberação indevida e de indeterminados.
 
@@ -240,6 +241,12 @@ computador dele, fora do repositório.
 Um ponto de controle não garante o uso do EPI ao longo do turno; um único participante
 limita a generalização, e repetições da mesma pessoa não são observações totalmente
 independentes; as bases públicas não cobrem especificamente EPIs de segurança.
+
+No SH17, 1.487 das 1.620 imagens de teste (92%) são de fotógrafos que também têm imagens no
+treino. Como fotos de um mesmo fotógrafo podem compartilhar cenário e pessoas, o desempenho
+do E1 no teste interno e no desenvolvimento é possivelmente otimista; o efeito não foi
+medido. A divisão publicada pela base foi mantida, e a generalização é avaliada
+principalmente pelo teste entre bases.
 
 ## Aplicabilidade
 
